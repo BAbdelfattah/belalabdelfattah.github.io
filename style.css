@@ -7,21 +7,41 @@ body {
   text-align: center;
 }
 
+/* Header */
 header {
   background-color: #0f766e;
   color: white;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
+/* Sections */
 section {
   padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
+/* Button */
 button {
   background-color: #16a34a;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #15803d;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
 }
