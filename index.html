@@ -4,89 +4,152 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Belal Abdelfattah | Food Safety Consultant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin:0;
       padding:0;
       line-height:1.6;
       color:#333;
       background:#f7f7f7;
+      scroll-behavior: smooth;
     }
+
     section {
-      padding:50px 20px;
+      padding:60px 20px;
     }
+
     h1, h2 {
       text-align:center;
+      margin:0 0 20px 0;
     }
     h1 {
-      font-size:2.5em;
-      margin-bottom:10px;
+      font-size:3em;
+      font-weight:700;
+      color:white;
     }
     h2 {
       font-size:2em;
-      margin-bottom:30px;
+      font-weight:600;
+      margin-bottom:40px;
     }
+
     p {
       text-align:center;
       font-size:1.2em;
       margin-bottom:20px;
     }
 
-    /* Button Style */
+    /* Hero Section */
+    #hero {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      position: relative;
+      color:white;
+      padding:100px 20px 120px 20px;
+      overflow:hidden;
+    }
+    #hero::before {
+      content:'';
+      position:absolute;
+      width:300px;
+      height:300px;
+      background: rgba(255,255,255,0.1);
+      border-radius:50%;
+      top:-50px;
+      left:-50px;
+    }
+    #hero::after {
+      content:'';
+      position:absolute;
+      width:200px;
+      height:200px;
+      background: rgba(255,255,255,0.1);
+      border-radius:50%;
+      bottom:-50px;
+      right:-50px;
+    }
+
     .btn {
       display:inline-block;
-      padding:15px 30px;
-      font-size:1em;
-      background:#25D366;
-      color:white;
+      padding:18px 35px;
+      font-size:1.1em;
+      font-weight:600;
+      background:#fff;
+      color:#25D366;
       border:none;
       border-radius:50px;
       cursor:pointer;
-      margin-top:20px;
+      margin-top:30px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
       text-decoration:none;
     }
     .btn:hover {
-      background:#128C7E;
+      background:#f1f1f1;
+      transform:translateY(-3px);
     }
 
-    /* Card Style */
+    /* Cards */
     .card-container {
       display:flex;
       flex-wrap:wrap;
       justify-content:center;
-      gap:20px;
-      max-width:900px;
+      gap:25px;
+      max-width:1000px;
       margin:0 auto;
     }
     .card {
       background:white;
-      padding:20px;
-      border-radius:15px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.1);
       flex:1 1 250px;
       text-align:center;
-      transition: transform 0.2s;
+      transition: all 0.3s ease;
+      position:relative;
+      overflow:hidden;
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-7px);
+      box-shadow:0 15px 25px rgba(0,0,0,0.15);
+    }
+    .card-icon {
+      font-size:2em;
+      margin-bottom:15px;
+      color:#25D366;
     }
 
-    /* Footer Style */
+    /* CTA Banner */
+    #cta {
+      background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
+      color:white;
+      padding:80px 20px;
+    }
+
+    /* Footer */
     footer {
-      padding:30px 20px;
-      text-align:center;
+      padding:40px 20px;
       background:#333;
       color:white;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:50px;
+    }
+    footer div {
+      flex:1 1 250px;
+      text-align:center;
     }
     footer a {
       color:white;
       text-decoration:none;
     }
 
-    /* Responsive adjustments */
-    @media (max-width:600px) {
-      h1 { font-size:2em; }
+    @media(max-width:768px){
+      h1 { font-size:2.2em; }
       h2 { font-size:1.5em; }
       .card-container { gap:15px; }
     }
@@ -95,7 +158,7 @@
 <body>
 
   <!-- Hero Section -->
-  <section id="hero" style="background:#f9f9f9; border-bottom:2px solid #ddd;">
+  <section id="hero">
     <h1>Food Safety & Quality Systems Consultant</h1>
     <p>Helping food companies implement <strong>HACCP, FSMS, and export compliance</strong></p>
     <a href="https://wa.me/201271401270" class="btn">Request Consultation</a>
@@ -105,36 +168,66 @@
   <section id="services">
     <h2>Services</h2>
     <div class="card-container">
-      <div class="card">✅ HACCP System Development</div>
-      <div class="card">✅ Food Safety Audits</div>
-      <div class="card">✅ Export Readiness (NFSA / International Standards)</div>
-      <div class="card">✅ Supplier & Mill Verification</div>
-      <div class="card">✅ Training for Food Safety Teams</div>
+      <div class="card">
+        <div class="card-icon">🧾</div>
+        HACCP System Development
+      </div>
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        Food Safety Audits
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        Export Readiness (NFSA / International Standards)
+      </div>
+      <div class="card">
+        <div class="card-icon">🏭</div>
+        Supplier & Mill Verification
+      </div>
+      <div class="card">
+        <div class="card-icon">🎓</div>
+        Training for Food Safety Teams
+      </div>
     </div>
   </section>
 
-  <!-- Experience / Authority Section -->
+  <!-- Experience Section -->
   <section id="experience" style="background:#f0f0f0;">
     <h2>Experience</h2>
     <div class="card-container">
-      <div class="card">🔹 Food Safety & QA Specialist</div>
-      <div class="card">🔹 Experience with flour export verification</div>
-      <div class="card">🔹 NFSA compliance expertise</div>
-      <div class="card">🔹 HACCP implementation across food factories</div>
+      <div class="card">
+        <div class="card-icon">👨‍🔬</div>
+        Food Safety & QA Specialist
+      </div>
+      <div class="card">
+        <div class="card-icon">🌾</div>
+        Experience with flour export verification
+      </div>
+      <div class="card">
+        <div class="card-icon">✅</div>
+        NFSA compliance expertise
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        HACCP implementation across food factories
+      </div>
     </div>
   </section>
 
-  <!-- Call to Action Section -->
-  <section id="cta" style="text-align:center; background:white;">
+  <!-- Call to Action -->
+  <section id="cta" style="text-align:center;">
     <a href="https://wa.me/201271401270" class="btn">Chat on WhatsApp</a>
   </section>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer>
-    <p>Belal Abdelfattah<br>Food Safety & Quality Consultant</p>
-    <p>Email: <a href="mailto:b.abdelfattah@yahoo.com">b.abdelfattah@yahoo.com</a><br>
-       WhatsApp: <a href="https://wa.me/201271401270">+20 127 140 1270</a>
-    </p>
+    <div>
+      <p>Belal Abdelfattah<br>Food Safety & Quality Consultant</p>
+    </div>
+    <div>
+      <p>Email: <a href="mailto:b.abdelfattah@yahoo.com">b.abdelfattah@yahoo.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/201271401270">+20 127 140 1270</a></p>
+    </div>
   </footer>
 
 </body>
