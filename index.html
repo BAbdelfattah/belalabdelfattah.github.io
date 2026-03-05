@@ -1,198 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Belal Abdelfattah | Food Safety Coach & Mentor</title>
-  <style>
-    /* ===== Global Styles ===== */
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background-color: #fff;
-    }
-    h1, h2, h3 {
-      margin: 0 0 0.5em 0;
-      font-weight: 600;
-    }
-    p {
-      margin: 0 0 1em 0;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    button {
-      cursor: pointer;
-      padding: 0.7em 1.5em;
-      border: none;
-      border-radius: 8px;
-      font-size: 1em;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    button:hover {
-      opacity: 0.85;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* ===== Hero Section ===== */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 120px 20px 80px;
-      background-color: #f9f9f9;
-    }
-    .hero h1 {
-      font-size: 2.4em;
-      margin-bottom: 0.5em;
-    }
-    .hero p {
-      max-width: 600px;
-      margin-bottom: 1.5em;
-      font-size: 1.1em;
-      color: #555;
-    }
-    .cta-buttons button {
-      background-color: #0077b5;
-      color: #fff;
-      margin: 0 10px;
-    }
-    .cta-buttons button:first-child {
-      background-color: #25D366; /* WhatsApp green */
-      color: #fff;
-    }
+<title>Belal Abdelfattah | Food Safety Coach & Mentor</title>
 
-    /* ===== How I Help Section ===== */
-    .how-i-help {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .how-i-help h2 {
-      font-size: 2em;
-      margin-bottom: 40px;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .service {
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #eee;
-      background-color: #fff;
-      transition: 0.3s;
-    }
-    .service:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
-    .service h3 {
-      margin-bottom: 0.5em;
-      font-size: 1.2em;
-      color: #0077b5;
-    }
-    .service p {
-      color: #555;
-      font-size: 0.95em;
-    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    /* ===== Why Work With Me Section ===== */
-    .why-me {
-      background-color: #f9f9f9;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .why-me h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .why-me p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #555;
-      font-size: 1.05em;
-    }
+<style>
 
-    /* ===== Contact Section ===== */
-    .contact {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .contact h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .contact p {
-      margin-bottom: 30px;
-      font-size: 1.05em;
-      color: #555;
-    }
-    .contact button {
-      margin: 0 10px;
-    }
+/* ===== Global ===== */
 
-    /* ===== Responsive ===== */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2em; }
-      .how-i-help h2, .why-me h2, .contact h2 { font-size: 1.7em; }
-    }
-  </style>
+body{
+margin:0;
+font-family:Segoe UI,Arial;
+color:#222;
+line-height:1.6;
+}
+
+h1,h2,h3{
+margin-bottom:10px;
+}
+
+section{
+padding:80px 20px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+/* ===== Navbar ===== */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#fff;
+position:sticky;
+top:0;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+}
+
+.logo{
+font-weight:700;
+font-size:18px;
+}
+
+.nav-links a{
+margin-left:20px;
+font-weight:500;
+color:#333;
+}
+
+/* ===== Hero ===== */
+
+.hero{
+text-align:center;
+background:linear-gradient(135deg,#f7f9fb,#eef3f8);
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+max-width:650px;
+margin:auto;
+color:#555;
+margin-top:15px;
+font-size:18px;
+}
+
+.cta-buttons{
+margin-top:30px;
+}
+
+.cta-buttons button{
+padding:14px 26px;
+margin:10px;
+border:none;
+border-radius:8px;
+font-size:16px;
+font-weight:600;
+transition:0.3s;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.linkedin{
+background:#0077b5;
+color:white;
+}
+
+.cta-buttons button:hover{
+transform:translateY(-3px);
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* ===== Services ===== */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.service{
+padding:25px;
+border-radius:12px;
+border:1px solid #eee;
+background:white;
+transition:0.3s;
+}
+
+.service i{
+font-size:26px;
+color:#0077b5;
+margin-bottom:10px;
+}
+
+.service:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== Thinking Section ===== */
+
+.thinking{
+background:#f8f9fb;
+text-align:center;
+}
+
+.quote{
+max-width:700px;
+margin:30px auto;
+font-style:italic;
+color:#555;
+}
+
+/* ===== Why Me ===== */
+
+.why{
+text-align:center;
+}
+
+.why p{
+max-width:700px;
+margin:auto;
+color:#555;
+font-size:17px;
+}
+
+/* ===== Contact ===== */
+
+.contact{
+text-align:center;
+background:#f8f9fb;
+}
+
+.contact button{
+margin:10px;
+}
+
+/* ===== Footer ===== */
+
+.footer{
+text-align:center;
+padding:30px;
+background:#111;
+color:#bbb;
+font-size:14px;
+}
+
+/* ===== Mobile ===== */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:32px;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Empowering Food Safety Professionals</h1>
-    <p>Coach & Mentor in HACCP, FSMS, and Career Growth. Build skills, confidence, and impact in your food safety career.</p>
-    <div class="cta-buttons">
-      <button onclick="window.location.href='https://wa.me/201271401270'">Chat on WhatsApp</button>
-      <button onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">Connect on LinkedIn</button>
-    </div>
-  </section>
+<!-- NAVBAR -->
 
-  <!-- How I Help Section -->
-  <section class="how-i-help">
-    <h2>How I Guide You</h2>
-    <div class="services">
-      <div class="service">
-        <h3>1:1 Coaching</h3>
-        <p>Personalized guidance to strengthen FSMS skills, HACCP systems, and career growth.</p>
-      </div>
-      <div class="service">
-        <h3>Mentorship Programs</h3>
-        <p>Learn from real-world experience to navigate audits, certifications, and career transitions.</p>
-      </div>
-      <div class="service">
-        <h3>Group Learning</h3>
-        <p>Practical workshops and peer learning to develop expertise in food safety.</p>
-      </div>
-      <div class="service">
-        <h3>Career Development</h3>
-        <p>Build skills and confidence to move to top companies or new regions in the food industry.</p>
-      </div>
-    </div>
-  </section>
+<div class="navbar">
 
-  <!-- Why Work With Me Section -->
-  <section class="why-me">
-    <h2>Why Choose My Mentorship</h2>
-    <p>I help food safety professionals turn knowledge into action. With hands-on experience in FSMS and HACCP, I mentor you to create effective systems and advance your career. I don’t just give answers—I guide you to find them yourself and grow.</p>
-  </section>
+<div class="logo">
+Belal Abdelfattah
+</div>
 
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Start Your Journey</h2>
-    <p>Ready to grow your skills and career? Let’s get started.</p>
-    <button onclick="window.location.href='https://wa.me/201271401270'">Chat on WhatsApp</button>
-    <button onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">Connect on LinkedIn</button>
-  </section>
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">Mentorship</a>
+<a href="#">Insights</a>
+<a href="#">Contact</a>
+</div>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<h1>Food Safety Coach & Mentor</h1>
+
+<p>
+Helping food safety professionals build real systems, stronger thinking,
+and impactful careers in HACCP and Food Safety Management.
+</p>
+
+<div class="cta-buttons">
+
+<button class="whatsapp"
+onclick="window.location.href='https://wa.me/201271401270'">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</button>
+
+<button class="linkedin"
+onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
+<i class="fa-brands fa-linkedin"></i> LinkedIn
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HOW I HELP -->
+
+<section>
+
+<div class="container">
+
+<h2 style="text-align:center;">How I Help</h2>
+
+<div class="services">
+
+<div class="service">
+<i class="fa-solid fa-user"></i>
+<h3>1:1 Coaching</h3>
+<p>Personal guidance to strengthen HACCP systems, audits, and food safety leadership.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-people-group"></i>
+<h3>Mentorship Programs</h3>
+<p>Structured mentoring for professionals aiming to grow in food safety careers.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-graduation-cap"></i>
+<h3>Group Learning</h3>
+<p>Practical workshops and collaborative learning to develop real expertise.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Career Development</h3>
+<p>Helping professionals move to global companies and new international opportunities.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOD SAFETY THINKING -->
+
+<section class="thinking">
+
+<div class="container">
+
+<h2>Food Safety Thinking</h2>
+
+<p class="quote">
+“Food safety systems fail not because of missing SOPs,
+but because people do not understand the risk.”
+</p>
+
+<p class="quote">
+“Storage temperature is not a number — it is a biological control.”
+</p>
+
+<p class="quote">
+“Audits do not create food safety systems. Thinking does.”
+</p>
+
+</div>
+
+</section>
+
+<!-- WHY ME -->
+
+<section class="why">
+
+<div class="container">
+
+<h2>Why My Mentorship</h2>
+
+<p>
+
+I mentor food safety professionals to turn knowledge into action.
+Through real industry experience in HACCP and food safety systems,
+I guide professionals to design better systems, think critically,
+and advance their careers in the food industry.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<div class="container">
+
+<h2>Start Your Journey</h2>
+
+<p>Ready to grow your food safety career?</p>
+
+<button class="whatsapp"
+onclick="window.location.href='https://wa.me/201271401270'">
+WhatsApp
+</button>
+
+<button class="linkedin"
+onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
+LinkedIn
+</button>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+© 2026 Belal Abdelfattah — Food Safety Coach & Mentor
+
+</div>
 
 </body>
 </html>
