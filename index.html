@@ -5,18 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Belal Abdelfattah | Food Safety Coach & Mentor</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
 /* ===== Global ===== */
-body{
+html {
+  scroll-behavior: smooth;
+}
+body {
   margin:0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Segoe UI', Arial, sans-serif;
   color:#222;
   line-height:1.6;
 }
-h1,h2,h3{margin-bottom:10px;}
-section{padding:80px 20px;}
-.container{max-width:1100px;margin:auto;}
+h1,h2,h3 {
+  margin-bottom:10px;
+}
+section {
+  padding:80px 20px;
+}
+.container {
+  max-width:1100px;
+  margin:auto;
+}
 
 /* ===== Navbar ===== */
 .navbar{
@@ -30,8 +39,15 @@ section{padding:80px 20px;}
   box-shadow:0 2px 10px rgba(0,0,0,0.05);
   z-index:1000;
 }
-.logo{font-weight:700;font-size:18px;}
-.nav-links a{margin-left:20px;font-weight:500;color:#333;}
+.logo{
+  font-weight:700;
+  font-size:18px;
+}
+.nav-links a{
+  margin-left:20px;
+  font-weight:500;
+  color:#333;
+}
 
 /* ===== Hero ===== */
 .hero{
@@ -39,7 +55,9 @@ section{padding:80px 20px;}
   background:linear-gradient(135deg,#f7f9fb,#eef3f8);
   padding:120px 20px;
 }
-.hero h1{font-size:42px;}
+.hero h1{
+  font-size:42px;
+}
 .hero p{
   max-width:650px;
   margin:auto;
@@ -47,7 +65,9 @@ section{padding:80px 20px;}
   margin-top:15px;
   font-size:18px;
 }
-.cta-buttons{margin-top:30px;}
+.cta-buttons{
+  margin-top:30px;
+}
 .cta-buttons button{
   padding:14px 26px;
   margin:10px;
@@ -57,8 +77,14 @@ section{padding:80px 20px;}
   font-weight:600;
   transition:0.3s;
 }
-.whatsapp{background:#25D366;color:white;}
-.linkedin{background:#0077b5;color:white;}
+.whatsapp{
+  background:#25D366;
+  color:white;
+}
+.linkedin{
+  background:#0077b5;
+  color:white;
+}
 .cta-buttons button:hover{
   transform:translateY(-3px);
   box-shadow:0 6px 18px rgba(0,0,0,0.1);
@@ -77,6 +103,7 @@ section{padding:80px 20px;}
   border:1px solid #eee;
   background:white;
   transition:0.3s;
+  text-align:center;
 }
 .service i{
   font-size:26px;
@@ -101,129 +128,192 @@ section{padding:80px 20px;}
 }
 
 /* ===== Why Me ===== */
-.why{text-align:center;}
-.why p{max-width:700px;margin:auto;color:#555;font-size:17px;}
+.why{
+  text-align:center;
+}
+.why p{
+  max-width:700px;
+  margin:auto;
+  color:#555;
+  font-size:17px;
+}
 
 /* ===== Timeline ===== */
-.timeline-section{padding:80px 20px;background:#fff;}
-.timeline-section h2{text-align:center;margin-bottom:50px;}
+.timeline-section{
+  background:white;
+  text-align:center;
+}
 .timeline{
   position:relative;
   max-width:900px;
-  margin:auto;
+  margin:50px auto;
   padding-left:20px;
 }
 .timeline::before{
   content:'';
   position:absolute;
-  left:20px;
+  left:50%;
   top:0;
   bottom:0;
   width:4px;
   background:#0077b5;
+  transform:translateX(-50%);
 }
 .timeline-item{
+  padding:20px 40px;
   position:relative;
-  margin-bottom:50px;
-  padding-left:50px;
+  width:50%;
+}
+.timeline-item:nth-child(odd){
+  left:0;
+}
+.timeline-item:nth-child(even){
+  left:50%;
 }
 .timeline-dot{
   position:absolute;
-  left:12px;
-  top:0;
-  width:16px;
-  height:16px;
+  top:20px;
+  width:20px;
+  height:20px;
   background:#0077b5;
   border-radius:50%;
+  border:4px solid white;
+  z-index:1;
+  left:50%;
+  transform:translateX(-50%);
 }
-.timeline-content h3{margin:0;font-size:1.3em;color:#0077b5;}
-.timeline-content span{font-size:0.9em;color:#888;}
-.timeline-content p{margin-top:5px;color:#555;}
-
-/* ===== Articles / Insights ===== */
-.articles-section{padding:80px 20px;background:#f8f9fb;}
-.articles-section h2{text-align:center;margin-bottom:50px;}
-.articles{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-  max-width:1000px;
-  margin:auto;
-}
-.article-card{
-  background:white;
+.timeline-content{
   padding:20px;
+  background:#f7f9fb;
+  border-radius:8px;
+  position:relative;
+}
+.timeline-content h3{
+  margin-bottom:5px;
+  color:#0077b5;
+}
+.timeline-content span{
+  font-size:14px;
+  color:#777;
+}
+.timeline-content p{
+  margin-top:10px;
+  color:#555;
+  font-size:15px;
+}
+@media(max-width:768px){
+  .timeline::before{
+    left:20px;
+  }
+  .timeline-item{
+    width:100%;
+    left:0 !important;
+    margin-left:40px;
+    margin-bottom:30px;
+  }
+  .timeline-dot{
+    left:20px;
+  }
+}
+
+/* ===== Insights / Articles ===== */
+.insights{
+  background:#f8f9fb;
+  text-align:center;
+}
+.article{
+  background:white;
   border-radius:10px;
-  box-shadow:0 4px 20px rgba(0,0,0,0.05);
+  padding:20px;
+  margin:20px auto;
+  max-width:600px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
   transition:0.3s;
 }
-.article-card:hover{box-shadow:0 6px 25px rgba(0,0,0,0.1);}
-.article-card h3{margin-bottom:10px;color:#0077b5;font-size:1.2em;}
-.article-card p{color:#555;font-size:0.95em;}
-.article-card a{
-  display:inline-block;
-  margin-top:10px;
-  font-weight:600;
-  color:#25D366;
-  text-decoration:none;
+.article:hover{
+  transform:translateY(-5px);
 }
-.article-card a:hover{color:#0077b5;}
 
 /* ===== Contact ===== */
-.contact{text-align:center;background:#fff;}
-.contact button{margin:10px;}
+.contact{
+  text-align:center;
+  background:#fff;
+}
+.contact button{
+  margin:10px;
+}
 
 /* ===== Footer ===== */
-.footer{text-align:center;padding:30px;background:#111;color:#bbb;font-size:14px;}
-
-/* ===== Mobile ===== */
-@media(max-width:768px){
-  .hero h1{font-size:32px;}
-  .nav-links{display:none;}
+.footer{
+  text-align:center;
+  padding:30px;
+  background:#111;
+  color:#bbb;
+  font-size:14px;
 }
 </style>
 </head>
-
 <body>
 
 <!-- NAVBAR -->
 <div class="navbar">
   <div class="logo">Belal Abdelfattah</div>
   <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Mentorship</a>
-    <a href="#">Insights</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#mentorship">Mentorship</a>
+    <a href="#timeline-section">Timeline</a>
+    <a href="#insights">Insights</a>
+    <a href="#contact">Contact</a>
   </div>
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section id="home" class="hero">
   <div class="container">
     <h1>Food Safety Coach & Mentor</h1>
     <p>Helping food safety professionals build real systems, stronger thinking, and impactful careers in HACCP and Food Safety Management.</p>
     <div class="cta-buttons">
-      <button class="whatsapp" onclick="window.location.href='https://wa.me/201271401270'"><i class="fa-brands fa-whatsapp"></i> WhatsApp</button>
-      <button class="linkedin" onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'"><i class="fa-brands fa-linkedin"></i> LinkedIn</button>
+      <button class="whatsapp" onclick="window.location.href='https://wa.me/201271401270'">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </button>
+      <button class="linkedin" onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </button>
     </div>
   </div>
 </section>
 
-<!-- HOW I HELP -->
-<section>
+<!-- MENTORSHIP -->
+<section id="mentorship">
   <div class="container">
     <h2 style="text-align:center;">How I Help</h2>
     <div class="services">
-      <div class="service"><i class="fa-solid fa-user"></i><h3>1:1 Coaching</h3><p>Personal guidance to strengthen HACCP systems, audits, and food safety leadership.</p></div>
-      <div class="service"><i class="fa-solid fa-people-group"></i><h3>Mentorship Programs</h3><p>Structured mentoring for professionals aiming to grow in food safety careers.</p></div>
-      <div class="service"><i class="fa-solid fa-graduation-cap"></i><h3>Group Learning</h3><p>Practical workshops and collaborative learning to develop real expertise.</p></div>
-      <div class="service"><i class="fa-solid fa-chart-line"></i><h3>Career Development</h3><p>Helping professionals move to global companies and new international opportunities.</p></div>
+      <div class="service">
+        <i class="fa-solid fa-user"></i>
+        <h3>1:1 Coaching</h3>
+        <p>Personal guidance to strengthen HACCP systems, audits, and food safety leadership.</p>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>Mentorship Programs</h3>
+        <p>Structured mentoring for professionals aiming to grow in food safety careers.</p>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h3>Group Learning</h3>
+        <p>Practical workshops and collaborative learning to develop real expertise.</p>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Career Development</h3>
+        <p>Helping professionals move to global companies and new international opportunities.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- TIMELINE -->
-<section class="timeline-section">
+<section id="timeline-section" class="timeline-section">
   <h2>My Journey in Food Safety</h2>
   <div class="timeline">
     <div class="timeline-item">
@@ -231,7 +321,7 @@ section{padding:80px 20px;}
       <div class="timeline-content">
         <h3>Food Safety & Quality Professional</h3>
         <span>Early Career</span>
-        <p>Gained experience in HACCP, audits, supplier quality, and QA processes.</p>
+        <p>Worked in food safety and quality management, developing practical experience in HACCP systems, food safety compliance, and quality assurance.</p>
       </div>
     </div>
     <div class="timeline-item">
@@ -239,7 +329,7 @@ section{padding:80px 20px;}
       <div class="timeline-content">
         <h3>Food Safety Systems Development</h3>
         <span>Professional Growth</span>
-        <p>Designed and improved HACCP systems, audit preparation, and process control.</p>
+        <p>Designed and improved food safety systems including HACCP implementation, audit preparation, supplier verification, and process control.</p>
       </div>
     </div>
     <div class="timeline-item">
@@ -247,7 +337,7 @@ section{padding:80px 20px;}
       <div class="timeline-content">
         <h3>International Food Aid & Commodity Quality</h3>
         <span>Advanced Experience</span>
-        <p>Worked on fortified wheat flour, storage management, fumigation, and compliance standards.</p>
+        <p>Worked with international standards for fortified wheat flour, storage management, fumigation, and food aid commodity compliance.</p>
       </div>
     </div>
     <div class="timeline-item">
@@ -255,54 +345,33 @@ section{padding:80px 20px;}
       <div class="timeline-content">
         <h3>Food Safety Coach & Mentor</h3>
         <span>Today</span>
-        <p>Mentoring professionals to create systems, prepare for audits, and grow careers.</p>
+        <p>Helping food safety professionals build real systems, prepare for audits, and develop strong professional thinking through mentorship and coaching.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ARTICLES / INSIGHTS -->
-<section class="articles-section">
-  <h2>Insights & Articles</h2>
-  <div class="articles">
-    <div class="article-card">
-      <h3>Understanding HACCP in Food Production</h3>
-      <p>Key principles and how to implement effective HACCP systems to protect consumers.</p>
-      <a href="#">Read More</a>
-    </div>
-    <div class="article-card">
-      <h3>Fortified Flour: Standards and Compliance</h3>
-      <p>Guide to fortified wheat flour safety, packaging, and international compliance.</p>
-      <a href="#">Read More</a>
-    </div>
-    <div class="article-card">
-      <h3>Audit Preparation Tips for FSMS</h3>
-      <p>How to prepare teams and processes for smooth internal and external audits.</p>
-      <a href="#">Read More</a>
-    </div>
-  </div>
-</section>
-
-<!-- THINKING -->
-<section class="thinking">
+<!-- INSIGHTS / ARTICLES -->
+<section id="insights" class="insights">
   <div class="container">
-    <h2>Food Safety Thinking</h2>
-    <p class="quote">“Food safety systems fail not because of missing SOPs, but because people do not understand the risk.”</p>
-    <p class="quote">“Storage temperature is not a number — it is a biological control.”</p>
-    <p class="quote">“Audits do not create food safety systems. Thinking does.”</p>
-  </div>
-</section>
-
-<!-- WHY ME -->
-<section class="why">
-  <div class="container">
-    <h2>Why My Mentorship</h2>
-    <p>I mentor food safety professionals to turn knowledge into action. Through real industry experience in HACCP and food safety systems, I guide professionals to design better systems, think critically, and advance their careers in the food industry.</p>
+    <h2>Insights & Articles</h2>
+    <div class="article">
+      <h3>Why HACCP Fails Without Thinking</h3>
+      <p>Most food safety systems fail because people don’t understand risk, not because SOPs are missing. Learn practical strategies to embed real thinking into audits and systems.</p>
+    </div>
+    <div class="article">
+      <h3>Effective Supplier Audits</h3>
+      <p>Learn how to streamline supplier verification, reduce risk, and improve food quality standards across the supply chain.</p>
+    </div>
+    <div class="article">
+      <h3>Career Growth in Food Safety</h3>
+      <p>Discover actionable steps to move from technical roles to leadership positions in food safety and quality assurance.</p>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
+<section id="contact" class="contact">
   <div class="container">
     <h2>Start Your Journey</h2>
     <p>Ready to grow your food safety career?</p>
@@ -312,7 +381,9 @@ section{padding:80px 20px;}
 </section>
 
 <!-- FOOTER -->
-<div class="footer">© 2026 Belal Abdelfattah — Food Safety Coach & Mentor</div>
+<div class="footer">
+  © 2026 Belal Abdelfattah — Food Safety Coach & Mentor
+</div>
 
 </body>
 </html>
