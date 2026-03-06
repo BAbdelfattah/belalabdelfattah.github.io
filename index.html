@@ -1,314 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Belal Abdelfattah | Food Safety Coach & Mentor</title>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-/* ===== Global ===== */
+
+/* GLOBAL */
+
 body{
-  margin:0;
-  font-family:Segoe UI,Arial;
-  color:#222;
-  line-height:1.6;
+margin:0;
+font-family:Segoe UI, Arial;
+color:#222;
+line-height:1.6;
 }
-h1,h2,h3{margin-bottom:10px;}
-a{text-decoration:none;color:inherit;}
-section{padding:80px 20px;}
-.container{max-width:1100px;margin:auto;}
 
-/* ===== Navbar ===== */
+h1,h2,h3{
+margin-bottom:10px;
+}
+
+section{
+padding:80px 20px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+/* NAVBAR */
+
 .navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px;
-  background:#fff;
-  position:sticky;
-  top:0;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
-  z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:white;
+position:sticky;
+top:0;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
 }
-.logo{font-weight:700;font-size:18px;}
+
+.logo{
+font-weight:700;
+font-size:18px;
+}
+
 .nav-links a{
-  margin-left:20px;
-  font-weight:500;
-  color:#333;
-  transition:0.3s;
+margin-left:20px;
+text-decoration:none;
+font-weight:500;
+color:#333;
 }
-.nav-links a:hover{color:#0077b5;}
 
-/* ===== Hero ===== */
+/* HERO */
+
 .hero{
-  text-align:center;
-  background:linear-gradient(135deg,#f7f9fb,#eef3f8);
-  padding:120px 20px;
+text-align:center;
+background:linear-gradient(135deg,#0f5132,#198754);
+color:white;
+padding:120px 20px;
 }
-.hero h1{font-size:42px;}
-.hero p{max-width:650px;margin:auto;color:#555;margin-top:15px;font-size:18px;}
-.cta-buttons{margin-top:30px;}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+max-width:650px;
+margin:auto;
+margin-top:15px;
+font-size:18px;
+color:#e8f5e9;
+}
+
+/* BUTTONS */
+
+.cta-buttons{
+margin-top:30px;
+}
+
 .cta-buttons button{
-  padding:14px 26px;
-  margin:10px;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-  font-weight:600;
-  transition:0.3s;
-}
-.whatsapp{background:#25D366;color:white;}
-.linkedin{background:#0077b5;color:white;}
-.cta-buttons button:hover{
-  transform:translateY(-3px);
-  box-shadow:0 6px 18px rgba(0,0,0,0.1);
+padding:14px 26px;
+margin:10px;
+border:none;
+border-radius:8px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
 }
 
-/* ===== Services ===== */
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.linkedin{
+background:#0077b5;
+color:white;
+}
+
+/* SERVICES */
+
 .services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-  margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
 }
+
 .service{
-  padding:25px;
-  border-radius:12px;
-  border:1px solid #eee;
-  background:white;
-  transition:0.3s;
-  text-align:center;
-}
-.service i{font-size:26px;color:#0077b5;margin-bottom:10px;}
-.service:hover{
-  transform:translateY(-6px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+padding:25px;
+border-radius:12px;
+border:1px solid #eee;
+background:white;
 }
 
-/* ===== Timeline ===== */
-.timeline-section h2{text-align:center;margin-bottom:50px;}
+.service i{
+font-size:26px;
+color:#198754;
+margin-bottom:10px;
+}
+
+/* TIMELINE */
+
+.timeline-section{
+background:#f8f9fb;
+}
+
 .timeline{
-  position:relative;
-  margin:40px 0;
-  padding-left:40px;
+max-width:800px;
+margin:auto;
+position:relative;
 }
-.timeline::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:20px;
-  width:4px;
-  height:100%;
-  background:#0077b5;
+
+.timeline::after{
+content:'';
+position:absolute;
+width:4px;
+background:#198754;
+top:0;
+bottom:0;
+left:50%;
+margin-left:-2px;
 }
+
 .timeline-item{
-  position:relative;
-  margin-bottom:40px;
+padding:20px 40px;
+position:relative;
+width:50%;
 }
+
+.timeline-item:nth-child(odd){
+left:0;
+}
+
+.timeline-item:nth-child(even){
+left:50%;
+}
+
 .timeline-dot{
-  position:absolute;
-  left:12px;
-  width:16px;
-  height:16px;
-  background:#fff;
-  border:4px solid #0077b5;
-  border-radius:50%;
-  top:0;
+width:16px;
+height:16px;
+background:#198754;
+border-radius:50%;
+position:absolute;
+top:25px;
+right:-8px;
 }
+
+.timeline-item:nth-child(even) .timeline-dot{
+left:-8px;
+}
+
 .timeline-content{
-  padding-left:40px;
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
-.timeline-content h3{margin-bottom:5px;color:#0077b5;}
-.timeline-content span{font-size:0.9em;color:#555;}
-.timeline-content p{margin-top:5px;color:#555;}
 
-/* ===== Thinking ===== */
-.thinking{text-align:center;background:#f8f9fb;}
-.quote{max-width:700px;margin:30px auto;font-style:italic;color:#555;}
+/* THINKING */
 
-/* ===== Why Me ===== */
-.why{text-align:center;}
-.why p{max-width:700px;margin:auto;color:#555;font-size:17px;}
-
-/* ===== Insights / Articles ===== */
-.insights{background:#f7f9fb;text-align:center;}
-.articles{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px;}
-.article-card{
-  background:white;padding:20px;border-radius:10px;transition:0.3s;border:1px solid #eee;text-align:left;
+.thinking{
+background:#f8f9fb;
+text-align:center;
 }
-.article-card:hover{box-shadow:0 10px 30px rgba(0,0,0,0.08);}
-.article-card h3{color:#0077b5;margin-bottom:10px;}
-.article-card p{color:#555;font-size:0.95em;}
-.article-card a{display:inline-block;margin-top:10px;color:#25D366;font-weight:600;}
 
-/* ===== Contact ===== */
-.contact{text-align:center;background:#f8f9fb;}
-.contact button{margin:10px;}
+.quote{
+max-width:700px;
+margin:30px auto;
+font-style:italic;
+color:#555;
+}
 
-/* ===== Footer ===== */
-.footer{text-align:center;padding:30px;background:#111;color:#bbb;font-size:14px;}
+/* CONTACT */
 
-/* ===== Mobile ===== */
+.contact{
+text-align:center;
+background:#f8f9fb;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:30px;
+background:#111;
+color:#bbb;
+font-size:14px;
+}
+
+/* MOBILE */
+
 @media(max-width:768px){
-  .hero h1{font-size:32px;}
-  .nav-links{display:none;}
+
+.timeline::after{
+left:20px;
 }
+
+.timeline-item{
+width:100%;
+padding-left:60px;
+padding-right:20px;
+}
+
+.timeline-item:nth-child(even){
+left:0;
+}
+
+.timeline-dot{
+left:12px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
 </style>
+
 </head>
+
 <body>
 
 <!-- NAVBAR -->
+
 <div class="navbar">
-  <div class="logo">Belal Abdelfattah</div>
-  <div class="nav-links">
-    <a href="#hero">Home</a>
-    <a href="#services">Mentorship</a>
-    <a href="#insights">Insights</a>
-    <a href="#contact">Contact</a>
-  </div>
+
+<div class="logo">
+Belal Abdelfattah
 </div>
 
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#mentorship">Mentorship</a>
+<a href="insights.html">Insights</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+
+
 <!-- HERO -->
-<section id="hero" class="hero">
-  <div class="container">
-    <h1>Empowering Food Safety Professionals</h1>
-    <p>Coach & Mentor in HACCP, FSMS, and Career Growth. Build skills, confidence, and impact in your food safety career.</p>
-    <div class="cta-buttons">
-      <button class="whatsapp" onclick="window.location.href='https://wa.me/201271401270'">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-      </button>
-      <button class="linkedin" onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </button>
-    </div>
-  </div>
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<h1>Food Safety Coach & Mentor</h1>
+
+<p>
+Helping food safety professionals build real systems, stronger thinking,
+and impactful careers in HACCP and food safety management.
+</p>
+
+<div class="cta-buttons">
+
+<button class="whatsapp"
+onclick="window.location.href='https://wa.me/201271401270'">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</button>
+
+<button class="linkedin"
+onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
+<i class="fa-brands fa-linkedin"></i> LinkedIn
+</button>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- SERVICES / MENTORSHIP -->
-<section id="services" class="services-section">
-  <div class="container">
-    <h2 style="text-align:center;">How I Guide You</h2>
-    <div class="services">
-      <div class="service">
-        <i class="fa-solid fa-user"></i>
-        <h3>1:1 Coaching</h3>
-        <p>Personalized guidance to strengthen FSMS skills, HACCP systems, and career growth.</p>
-      </div>
-      <div class="service">
-        <i class="fa-solid fa-people-group"></i>
-        <h3>Mentorship Programs</h3>
-        <p>Learn from real-world experience to navigate audits, certifications, and career transitions.</p>
-      </div>
-      <div class="service">
-        <i class="fa-solid fa-graduation-cap"></i>
-        <h3>Group Learning</h3>
-        <p>Practical workshops and peer learning to develop expertise in food safety.</p>
-      </div>
-      <div class="service">
-        <i class="fa-solid fa-chart-line"></i>
-        <h3>Career Development</h3>
-        <p>Build skills and confidence to move to top companies or new regions in the food industry.</p>
-      </div>
-    </div>
-  </div>
+
+<!-- SERVICES -->
+
+<section id="mentorship">
+
+<div class="container">
+
+<h2 style="text-align:center;">How I Help</h2>
+
+<div class="services">
+
+<div class="service">
+<i class="fa-solid fa-user"></i>
+<h3>1:1 Coaching</h3>
+<p>Personal mentoring to strengthen HACCP systems and audit readiness.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-people-group"></i>
+<h3>Mentorship Programs</h3>
+<p>Structured programs for professionals growing in food safety careers.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-graduation-cap"></i>
+<h3>Group Learning</h3>
+<p>Interactive workshops and group sessions.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Career Development</h3>
+<p>Guidance for moving to global companies and leadership roles.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
+
 
 <!-- TIMELINE -->
+
 <section class="timeline-section">
-  <div class="container">
-    <h2>My Journey in Food Safety</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Food Safety & Quality Professional</h3>
-          <span>Early Career</span>
-          <p>Worked in food safety and quality management, developing practical experience in HACCP systems, compliance, and QA in production.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Food Safety Systems Development</h3>
-          <span>Professional Growth</span>
-          <p>Designed and improved food safety systems including HACCP implementation, audit preparation, supplier verification, and process control.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>International Food Aid & Commodity Quality</h3>
-          <span>Advanced Experience</span>
-          <p>Worked with international standards for fortified wheat flour, storage management, fumigation, and food aid commodity compliance.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Food Safety Coach & Mentor</h3>
-          <span>Today</span>
-          <p>Helping food safety professionals build real systems, prepare for audits, and develop strong professional thinking through mentorship and coaching.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
+<h2 style="text-align:center;">My Journey in Food Safety</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2010</h3>
+<p>QA/QC Supervisor – Americana (Saudi Arabia)</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2014</h3>
+<p>Food Safety Specialist – Juhayna</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2015</h3>
+<p>Food Safety & Quality Manager – Carrefour Hypermarkets</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2018</h3>
+<p>Supplier Quality Development – Carrefour</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2022</h3>
+<p>Food Safety & QA Manager – Carrefour E-commerce</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>2025</h3>
+<p>Total Quality Manager – Middle East for Raw Materials</p>
+</div>
+</div>
+
+</div>
+
 </section>
 
-<!-- FOOD SAFETY THINKING -->
+
+<!-- THINKING -->
+
 <section class="thinking">
-  <div class="container">
-    <h2>Food Safety Thinking</h2>
-    <p class="quote">“Food safety systems fail not because of missing SOPs, but because people do not understand the risk.”</p>
-    <p class="quote">“Storage temperature is not a number — it is a biological control.”</p>
-    <p class="quote">“Audits do not create food safety systems. Thinking does.”</p>
-  </div>
+
+<div class="container">
+
+<h2>Food Safety Thinking</h2>
+
+<p class="quote">
+“Food safety systems fail not because SOPs are missing,
+but because people do not understand the risk.”
+</p>
+
+<p class="quote">
+“Storage temperature is not a number — it is a biological control.”
+</p>
+
+<p class="quote">
+“Audits do not create food safety systems. Thinking does.”
+</p>
+
+</div>
+
 </section>
 
-<!-- WHY ME -->
-<section class="why">
-  <div class="container">
-    <h2>Why My Mentorship</h2>
-    <p>I help food safety professionals turn knowledge into action. With hands-on experience in FSMS and HACCP, I mentor you to create effective systems and advance your career. I guide you to find solutions and grow professionally.</p>
-  </div>
-</section>
-
-<!-- INSIGHTS / ARTICLES -->
-<section id="insights" class="insights">
-  <div class="container">
-    <h2>Insights & Articles</h2>
-    <div class="articles">
-      <div class="article-card">
-        <h3>Why HACCP Fails Without Thinking</h3>
-        <p>Discover the critical mindset gaps that prevent food safety systems from working effectively.</p>
-        <a href="article1.html">Read More →</a>
-      </div>
-      <div class="article-card">
-        <h3>Top 5 Audit Mistakes in Food Safety</h3>
-        <p>Learn the common pitfalls in audits and how to prevent them in your organization.</p>
-        <a href="article2.html">Read More →</a>
-      </div>
-      <div class="article-card">
-        <h3>Building a Strong FSMS from Scratch</h3>
-        <p>A step-by-step approach to creating a compliant and efficient food safety management system.</p>
-        <a href="article3.html">Read More →</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Start Your Journey</h2>
-    <p>Ready to grow your food safety career? Let’s get started.</p>
-    <button class="whatsapp" onclick="window.location.href='https://wa.me/201271401270'">WhatsApp</button>
-    <button class="linkedin" onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">LinkedIn</button>
-  </div>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2>Start Your Journey</h2>
+
+<p>Ready to grow your food safety career?</p>
+
+<button class="whatsapp"
+onclick="window.location.href='https://wa.me/201271401270'">
+WhatsApp
+</button>
+
+<button class="linkedin"
+onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
+LinkedIn
+</button>
+
+</div>
+
 </section>
 
+
 <!-- FOOTER -->
+
 <div class="footer">
-  © 2026 Belal Abdelfattah — Food Safety Coach & Mentor
+
+© 2026 Belal Abdelfattah — Food Safety Coach & Mentor
+
 </div>
 
 </body>
