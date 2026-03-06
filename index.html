@@ -7,116 +7,62 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 /* ===== Global ===== */
-body{
-  margin:0;
-  font-family:Segoe UI,Arial,sans-serif;
-  color:#222;
-  line-height:1.6;
-}
+body{margin:0;font-family:Segoe UI,Arial;color:#222;line-height:1.6;}
 h1,h2,h3{margin-bottom:10px;}
 section{padding:80px 20px;}
 .container{max-width:1100px;margin:auto;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;padding:0.7em 1.5em;border:none;border-radius:8px;font-size:1em;font-weight:600;transition:0.3s;}
+button:hover{opacity:0.85;}
 
 /* ===== Navbar ===== */
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px;
-  background:#fff;
-  position:sticky;
-  top:0;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
-  z-index:1000;
-}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:20px;background:#fff;position:sticky;top:0;box-shadow:0 2px 10px rgba(0,0,0,0.05);z-index:1000;}
 .logo{font-weight:700;font-size:18px;}
 .nav-links a{margin-left:20px;font-weight:500;color:#333;}
 
 /* ===== Hero ===== */
-.hero{
-  text-align:center;
-  background:linear-gradient(135deg,#f7f9fb,#eef3f8);
-  padding:120px 20px;
-}
+.hero{text-align:center;background:linear-gradient(135deg,#f7f9fb,#eef3f8);padding:120px 20px;}
 .hero h1{font-size:42px;}
-.hero p{
-  max-width:650px;
-  margin:auto;
-  color:#555;
-  margin-top:15px;
-  font-size:18px;
-}
+.hero p{max-width:650px;margin:auto;color:#555;margin-top:15px;font-size:18px;}
 .cta-buttons{margin-top:30px;}
-.cta-buttons button{
-  padding:14px 26px;
-  margin:10px;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-  font-weight:600;
-  transition:0.3s;
-}
+.cta-buttons button{padding:14px 26px;margin:10px;border-radius:8px;font-size:16px;font-weight:600;transition:0.3s;}
 .whatsapp{background:#25D366;color:white;}
 .linkedin{background:#0077b5;color:white;}
-.cta-buttons button:hover{
-  transform:translateY(-3px);
-  box-shadow:0 6px 18px rgba(0,0,0,0.1);
-}
+.cta-buttons button:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,0.1);}
 
 /* ===== Services ===== */
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-  margin-top:40px;
-}
-.service{
-  padding:25px;
-  border-radius:12px;
-  border:1px solid #eee;
-  background:white;
-  transition:0.3s;
-}
-.service i{
-  font-size:26px;
-  color:#0077b5;
-  margin-bottom:10px;
-}
-.service:hover{
-  transform:translateY(-6px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;margin-top:40px;}
+.service{padding:25px;border-radius:12px;border:1px solid #eee;background:white;transition:0.3s;}
+.service i{font-size:26px;color:#0077b5;margin-bottom:10px;}
+.service:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.08);}
 
 /* ===== Thinking Section ===== */
 .thinking{background:#f8f9fb;text-align:center;}
-.quote{
-  max-width:700px;
-  margin:30px auto;
-  font-style:italic;
-  color:#555;
-}
+.quote{max-width:700px;margin:30px auto;font-style:italic;color:#555;}
 
 /* ===== Why Me ===== */
 .why{text-align:center;}
 .why p{max-width:700px;margin:auto;color:#555;font-size:17px;}
 
 /* ===== Timeline ===== */
-.timeline-section{background:#f8f9fb;padding:80px 20px;}
-.timeline{position:relative;max-width:800px;margin:auto;}
-.timeline-item{
-  margin-bottom:40px;
-  position:relative;
-  padding-left:40px;
-}
-.timeline-item div.timeline-dot{
-  width:16px;
-  height:16px;
-  background:#0077b5;
-  border-radius:50%;
-  position:absolute;
-  left:0;
-  top:5px;
-}
+.timeline-section{background:#fff;padding:80px 20px;}
+.timeline{position:relative;margin:50px 0;}
+.timeline::after{content:'';position:absolute;left:50%;top:0;bottom:0;width:4px;background:#0077b5;transform:translateX(-50%);}
+.timeline-item{position:relative;margin:30px 0;width:50%;padding:20px 40px;box-sizing:border-box;}
+.timeline-item:nth-child(odd){left:0;}
+.timeline-item:nth-child(even){left:50%;}
+.timeline-dot{width:20px;height:20px;background:#25D366;border-radius:50%;position:absolute;top:20px;left:50%;transform:translate(-50%,-50%);}
+.timeline-content{background:#f7f9fb;padding:20px;border-radius:10px;position:relative;}
+.timeline-item h3{margin-top:0;color:#0077b5;}
+.timeline-item span{font-size:0.9em;color:#555;}
+
+/* ===== Articles / Insights ===== */
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px;}
+.article-card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.05);transition:0.3s;}
+.article-card h3{color:#0077b5;margin-bottom:10px;}
+.article-card p{color:#555;font-size:0.95em;margin-bottom:15px;}
+.article-card a{color:#25D366;font-weight:600;text-decoration:none;}
+.article-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.1);}
 
 /* ===== Contact ===== */
 .contact{text-align:center;background:#f8f9fb;}
@@ -127,8 +73,11 @@ section{padding:80px 20px;}
 
 /* ===== Mobile ===== */
 @media(max-width:768px){
-  .hero h1{font-size:32px;}
-  .nav-links{display:none;}
+.hero h1{font-size:32px;}
+.nav-links{display:none;}
+.timeline::after{left:8px;}
+.timeline-item{width:100%;padding-left:30px;padding-right:10px;}
+.timeline-item:nth-child(even){left:0;}
 }
 </style>
 </head>
@@ -166,26 +115,10 @@ section{padding:80px 20px;}
   <div class="container">
     <h2 style="text-align:center;">How I Help</h2>
     <div class="services">
-      <div class="service">
-        <i class="fa-solid fa-user"></i>
-        <h3>1:1 Coaching</h3>
-        <p>Personal guidance to strengthen HACCP systems, audits, and food safety leadership.</p>
-      </div>
-      <div class="service">
-        <i class="fa-solid fa-people-group"></i>
-        <h3>Mentorship Programs</h3>
-        <p>Structured mentoring for professionals aiming to grow in food safety careers.</p>
-      </div>
-      <div class="service">
-        <i class="fa-solid fa-graduation-cap"></i>
-        <h3>Group Learning</h3>
-        <p>Practical workshops and collaborative learning to develop real expertise.</p>
-      </div>
-      <div class="service">
-        <i class="fa-solid fa-chart-line"></i>
-        <h3>Career Development</h3>
-        <p>Helping professionals move to global companies and new international opportunities.</p>
-      </div>
+      <div class="service"><i class="fa-solid fa-user"></i><h3>1:1 Coaching</h3><p>Personal guidance to strengthen HACCP systems, audits, and food safety leadership.</p></div>
+      <div class="service"><i class="fa-solid fa-people-group"></i><h3>Mentorship Programs</h3><p>Structured mentoring for professionals aiming to grow in food safety careers.</p></div>
+      <div class="service"><i class="fa-solid fa-graduation-cap"></i><h3>Group Learning</h3><p>Practical workshops and collaborative learning to develop real expertise.</p></div>
+      <div class="service"><i class="fa-solid fa-chart-line"></i><h3>Career Development</h3><p>Helping professionals move to global companies and new international opportunities.</p></div>
     </div>
   </div>
 </section>
@@ -200,85 +133,76 @@ section{padding:80px 20px;}
   </div>
 </section>
 
+<!-- TIMELINE -->
+<section class="timeline-section">
+  <div class="container">
+    <h2 style="text-align:center;">My Journey in Food Safety</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Total Quality Manager – Middle East for Raw Materials Ltd.</h3>
+          <span>2025 – Present</span>
+          <p>Overseeing QA for imported/exported food products, pest control, storage, and WFP compliance.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Food Safety & QA Manager – Carrefour E-commerce</h3>
+          <span>2022 – 2024</span>
+          <p>Managed audits, SOPs, staff training, and risk assessment across 70 business units.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Food Safety & QA Manager – Carrefour Supermarkets</h3>
+          <span>2020 – 2022</span>
+          <p>Oversaw audits, lab validations, and CAPA implementation for 45 supermarkets.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>QC/QA Supervisor – Americana, Jeddah, Saudi Arabia</h3>
+          <span>2010 – 2013</span>
+          <p>Supervised quality control from receiving to packaging, trained staff, and ensured compliance with HACCP and ISO standards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS / ARTICLES -->
+<section class="insights">
+  <div class="container">
+    <h2 style="text-align:center;">Insights & Articles</h2>
+    <div class="articles-grid">
+      <div class="article-card">
+        <h3>Master HACCP in 5 Steps</h3>
+        <p>Learn how to build HACCP systems that pass audits and reduce operational risk.</p>
+        <a href="articles/haccp-5-steps.html">Read More</a>
+      </div>
+      <div class="article-card">
+        <h3>FSMS Audit Preparation Tips</h3>
+        <p>Proven strategies to prepare for internal and external audits efficiently.</p>
+        <a href="articles/fsms-audit-tips.html">Read More</a>
+      </div>
+      <div class="article-card">
+        <h3>Career Growth in Food Safety</h3>
+        <p>Navigate your career in HACCP, FSMS, and quality assurance globally.</p>
+        <a href="articles/career-growth-food-safety.html">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHY ME -->
 <section class="why">
   <div class="container">
     <h2>Why My Mentorship</h2>
-    <p>I mentor food safety professionals to turn knowledge into action. Through real industry experience in HACCP and food safety systems, I guide professionals to design better systems, think critically, and advance their careers in the food industry.</p>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section class="timeline-section">
-  <div class="container">
-    <h2 style="text-align:center;margin-bottom:50px;">My Journey in Food Safety</h2>
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div>
-          <h3>Total Quality Manager</h3>
-          <span style="color:#555;">2025 – Present</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div>
-          <h3>Food Safety & QA Manager – E-commerce</h3>
-          <span style="color:#555;">2022 – 2024</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div>
-          <h3>Food Safety & QA Manager – Supermarkets</h3>
-          <span style="color:#555;">2020 – 2022</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div>
-          <h3>Food Safety & QA Manager – Supply Chain</h3>
-          <span style="color:#555;">2019</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div>
-          <h3>Food Safety & QA Manager – Suppliers</h3>
-          <span style="color:#555;">2018</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div>
-          <h3>Hypermarket Food Safety & QA Manager</h3>
-          <span style="color:#555;">2015 – 2018</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div>
-          <h3>Food Safety First Specialist – Juhayna</h3>
-          <span style="color:#555;">2014 – 2015</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div>
-          <h3>QC/QA Supervisor – Americana</h3>
-          <span style="color:#555;">2010 – 2013</span>
-        </div>
-      </div>
-
-    </div>
+    <p>I mentor food safety professionals to turn knowledge into action. Through real industry experience in HACCP and FSMS, I guide professionals to design better systems, think critically, and advance their careers.</p>
   </div>
 </section>
 
@@ -293,7 +217,9 @@ section{padding:80px 20px;}
 </section>
 
 <!-- FOOTER -->
-<div class="footer">© 2026 Belal Abdelfattah — Food Safety Coach & Mentor</div>
+<div class="footer">
+© 2026 Belal Abdelfattah — Food Safety Coach & Mentor
+</div>
 
 </body>
 </html>
