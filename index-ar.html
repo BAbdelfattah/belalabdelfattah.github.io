@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بلال عبد الفتاح | مدرب سلامة الغذاء</title>
+
+<style>
+
+/* ===== Global ===== */
+body{
+margin:0;
+font-family:Segoe UI, Arial, sans-serif;
+color:#222;
+line-height:1.6;
+text-align:right;
+}
+
+h1,h2,h3{
+margin-bottom:10px;
+}
+
+section{
+padding:80px 20px;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+}
+
+/* ===== Navbar ===== */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 30px;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-weight:700;
+font-size:18px;
+}
+
+.nav-links a{
+margin-right:20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.language-toggle {
+background: #22c55e;
+color: white;
+padding:6px 12px;
+border-radius:6px;
+font-weight:600;
+margin-right:15px;
+cursor:pointer;
+}
+
+/* ===== HERO ===== */
+.hero{
+background:linear-gradient(135deg,#0b7a3e,#22c55e,#15803d);
+text-align:center;
+padding:120px 20px;
+color:white;
+}
+
+.hero h1{
+font-size:44px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:19px;
+max-width:650px;
+margin:auto;
+color:white;
+}
+
+.cta-buttons{
+margin-top:30px;
+}
+
+.cta-buttons button{
+padding:14px 26px;
+margin:10px;
+border:none;
+border-radius:8px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.linkedin{
+background:#0077b5;
+color:white;
+}
+
+/* ===== Services ===== */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.service{
+padding:25px;
+border-radius:10px;
+border:1px solid #eee;
+background:white;
+}
+
+/* ===== Timeline ===== */
+.timeline{
+max-width:700px;
+margin:auto;
+margin-top:40px;
+}
+
+.timeline-item{
+padding:20px;
+border-right:4px solid #22c55e;
+margin-bottom:20px;
+background:#f9fafb;
+}
+
+.timeline-item span{
+color:#16a34a;
+font-weight:600;
+}
+
+/* ===== Thinking ===== */
+.thinking{
+background:#f3f4f6;
+text-align:center;
+}
+
+.quote{
+max-width:700px;
+margin:25px auto;
+font-style:italic;
+color:#555;
+}
+
+/* ===== Contact ===== */
+.contact{
+text-align:center;
+background:#f3f4f6;
+}
+
+.contact button{
+margin:10px;
+padding:14px 24px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* ===== Footer ===== */
+.footer{
+background:#111;
+color:#aaa;
+text-align:center;
+padding:25px;
+font-size:14px;
+}
+
+/* ===== Mobile ===== */
+@media(max-width:768px){
+.hero h1{
+font-size:32px;
+}
+
+.nav-links{
+display:none;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+<div class="logo">بلال عبد الفتاح</div>
+
+<div>
+  <div class="nav-links" style="display:inline;">
+    <a href="index-ar.html">الرئيسية</a>
+    <a href="#">الإرشاد</a>
+    <a href="insights-ar.html">مقالات</a>
+    <a href="#contact">اتصل بنا</a>
+  </div>
+  <button class="language-toggle" onclick="window.location.href='index.html'">EN</button>
+</div>
+
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>بلال عبد الفتاح</h1>
+
+<p>
+مدرب ومستشار في سلامة الغذاء، أساعد المحترفين على بناء أنظمة HACCP قوية، 
+الاستعداد للتدقيقات، وتطوير مسيرة مهنية مؤثرة في صناعة الغذاء.
+</p>
+
+<div class="cta-buttons">
+
+<button class="whatsapp"
+onclick="window.location.href='https://wa.me/201271401270'">
+الدردشة على واتساب
+</button>
+
+<button class="linkedin"
+onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
+الاتصال على لينكدإن
+</button>
+
+</div>
+
+</section>
+
+<!-- HOW I HELP -->
+<section>
+
+<div class="container">
+
+<h2 style="text-align:center;">كيف أساعدك</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>تدريب فردي</h3>
+<p>إرشاد شخصي لتقوية أنظمة HACCP والاستعداد للتدقيقات.</p>
+</div>
+
+<div class="service">
+<h3>الإرشاد</h3>
+<p>برنامج إرشادي للمحترفين لبناء مسيرة قوية في سلامة الغذاء.</p>
+</div>
+
+<div class="service">
+<h3>ورش عمل</h3>
+<p>جلسات عملية لتعلم HACCP وإدارة السلامة الغذائية والتفكير في المخاطر.</p>
+</div>
+
+<div class="service">
+<h3>تطوير المسار المهني</h3>
+<p>مساعدة المحترفين على الانتقال إلى شركات دولية وأدوار قيادية.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TIMELINE -->
+<section>
+
+<div class="container">
+
+<h2 style="text-align:center;">رحلتي المهنية</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<span>2010 – 2013</span>
+<h3>مشرف جودة – أمريكانا، السعودية</h3>
+</div>
+
+<div class="timeline-item">
+<span>2014 – 2015</span>
+<h3>أخصائي سلامة غذاء – جهينة</h3>
+</div>
+
+<div class="timeline-item">
+<span>2015 – 2024</span>
+<h3>مدير سلامة وجودة الغذاء – كارفور مصر</h3>
+</div>
+
+<div class="timeline-item">
+<span>2025 – الآن</span>
+<h3>مدير الجودة الشاملة – الشرق الأوسط للمواد الخام</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOD SAFETY THINKING -->
+<section class="thinking">
+
+<div class="container">
+
+<h2>التفكير في سلامة الغذاء</h2>
+
+<p class="quote">
+«أنظمة سلامة الغذاء تفشل ليس لأن الإجراءات مفقودة، بل لأن المخاطر غير مفهومة.»
+</p>
+
+<p class="quote">
+«درجة الحرارة ليست رقمًا، بل هي التحكم البيولوجي.»
+</p>
+
+<p class="quote">
+«التدقيقات لا تخلق أنظمة سلامة الغذاء، التفكير يفعل ذلك.»
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2>ابدأ رحلتك</h2>
+
+<p>هل أنت مستعد لتطوير مسيرتك في سلامة الغذاء؟</p>
+
+<button class="whatsapp"
+onclick="window.location.href='https://wa.me/201271401270'">
+واتساب
+</button>
+
+<button class="linkedin"
+onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
+لينكدإن
+</button>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+
+© 2026 بلال عبد الفتاح | مدرب سلامة الغذاء
+
+</div>
+
+</body>
+</html>
