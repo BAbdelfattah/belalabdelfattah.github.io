@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Belal Abdelfattah | Food Safety Coach & Mentor</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Belal Abdelfattah | Food Safety Coach</title>
 
 <style>
 
-/* GLOBAL */
+/* ===== Global ===== */
 
 body{
 margin:0;
@@ -30,22 +26,21 @@ padding:80px 20px;
 }
 
 .container{
-max-width:1100px;
+max-width:1000px;
 margin:auto;
 }
 
-/* NAVBAR */
+/* ===== Navbar ===== */
 
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
+padding:18px 30px;
 background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-z-index:1000;
 }
 
 .logo{
@@ -56,32 +51,30 @@ font-size:18px;
 .nav-links a{
 margin-left:20px;
 text-decoration:none;
-font-weight:500;
 color:#333;
+font-weight:500;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 
 .hero{
+background:linear-gradient(135deg,#0b7a3e,#22c55e,#15803d);
 text-align:center;
-background:linear-gradient(135deg,#0f5132,#198754);
-color:white;
 padding:120px 20px;
+color:white;
 }
 
 .hero h1{
-font-size:42px;
+font-size:44px;
+margin-bottom:15px;
 }
 
 .hero p{
+font-size:19px;
 max-width:650px;
 margin:auto;
-margin-top:15px;
-font-size:18px;
-color:#e8f5e9;
+color:white;
 }
-
-/* BUTTONS */
 
 .cta-buttons{
 margin-top:30px;
@@ -107,7 +100,7 @@ background:#0077b5;
 color:white;
 }
 
-/* SERVICES */
+/* ===== Services ===== */
 
 .services{
 display:grid;
@@ -118,127 +111,73 @@ margin-top:40px;
 
 .service{
 padding:25px;
-border-radius:12px;
+border-radius:10px;
 border:1px solid #eee;
 background:white;
 }
 
-.service i{
-font-size:26px;
-color:#198754;
-margin-bottom:10px;
-}
-
-/* TIMELINE */
-
-.timeline-section{
-background:#f8f9fb;
-}
+/* ===== Timeline ===== */
 
 .timeline{
-max-width:800px;
+max-width:700px;
 margin:auto;
-position:relative;
-}
-
-.timeline::after{
-content:'';
-position:absolute;
-width:4px;
-background:#198754;
-top:0;
-bottom:0;
-left:50%;
-margin-left:-2px;
+margin-top:40px;
 }
 
 .timeline-item{
-padding:20px 40px;
-position:relative;
-width:50%;
-}
-
-.timeline-item:nth-child(odd){
-left:0;
-}
-
-.timeline-item:nth-child(even){
-left:50%;
-}
-
-.timeline-dot{
-width:16px;
-height:16px;
-background:#198754;
-border-radius:50%;
-position:absolute;
-top:25px;
-right:-8px;
-}
-
-.timeline-item:nth-child(even) .timeline-dot{
-left:-8px;
-}
-
-.timeline-content{
-background:white;
 padding:20px;
-border-radius:8px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
+border-left:4px solid #22c55e;
+margin-bottom:20px;
+background:#f9fafb;
 }
 
-/* THINKING */
+.timeline-item span{
+color:#16a34a;
+font-weight:600;
+}
+
+/* ===== Thinking ===== */
 
 .thinking{
-background:#f8f9fb;
+background:#f3f4f6;
 text-align:center;
 }
 
 .quote{
 max-width:700px;
-margin:30px auto;
+margin:25px auto;
 font-style:italic;
 color:#555;
 }
 
-/* CONTACT */
+/* ===== Contact ===== */
 
 .contact{
 text-align:center;
-background:#f8f9fb;
+background:#f3f4f6;
 }
 
-/* FOOTER */
+.contact button{
+margin:10px;
+padding:14px 24px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* ===== Footer ===== */
 
 .footer{
-text-align:center;
-padding:30px;
 background:#111;
-color:#bbb;
+color:#aaa;
+text-align:center;
+padding:25px;
 font-size:14px;
 }
 
-/* MOBILE */
+/* ===== Mobile ===== */
 
 @media(max-width:768px){
-
-.timeline::after{
-left:20px;
-}
-
-.timeline-item{
-width:100%;
-padding-left:60px;
-padding-right:20px;
-}
-
-.timeline-item:nth-child(even){
-left:0;
-}
-
-.timeline-dot{
-left:12px;
-}
 
 .hero h1{
 font-size:32px;
@@ -251,7 +190,6 @@ display:none;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -265,50 +203,44 @@ Belal Abdelfattah
 </div>
 
 <div class="nav-links">
-<a href="#home">Home</a>
-<a href="#mentorship">Mentorship</a>
+<a href="#">Home</a>
+<a href="#">Mentorship</a>
 <a href="insights.html">Insights</a>
 <a href="#contact">Contact</a>
 </div>
 
 </div>
 
-
 <!-- HERO -->
 
-<section class="hero" id="home">
+<section class="hero">
 
-<div class="container">
-
-<h1>Food Safety Coach & Mentor</h1>
+<h1>Belal Abdelfattah</h1>
 
 <p>
-Helping food safety professionals build real systems, stronger thinking,
-and impactful careers in HACCP and food safety management.
+Food Safety Coach & Mentor helping professionals build strong HACCP systems,
+pass audits, and grow impactful careers in the food industry.
 </p>
 
 <div class="cta-buttons">
 
 <button class="whatsapp"
 onclick="window.location.href='https://wa.me/201271401270'">
-<i class="fa-brands fa-whatsapp"></i> WhatsApp
+Chat on WhatsApp
 </button>
 
 <button class="linkedin"
 onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
-<i class="fa-brands fa-linkedin"></i> LinkedIn
+Connect on LinkedIn
 </button>
-
-</div>
 
 </div>
 
 </section>
 
+<!-- HOW I HELP -->
 
-<!-- SERVICES -->
-
-<section id="mentorship">
+<section>
 
 <div class="container">
 
@@ -317,27 +249,23 @@ onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
 <div class="services">
 
 <div class="service">
-<i class="fa-solid fa-user"></i>
 <h3>1:1 Coaching</h3>
-<p>Personal mentoring to strengthen HACCP systems and audit readiness.</p>
+<p>Personal guidance to strengthen HACCP systems and prepare for audits.</p>
 </div>
 
 <div class="service">
-<i class="fa-solid fa-people-group"></i>
-<h3>Mentorship Programs</h3>
-<p>Structured programs for professionals growing in food safety careers.</p>
+<h3>Mentorship</h3>
+<p>Structured mentorship for professionals building careers in food safety.</p>
 </div>
 
 <div class="service">
-<i class="fa-solid fa-graduation-cap"></i>
-<h3>Group Learning</h3>
-<p>Interactive workshops and group sessions.</p>
+<h3>Workshops</h3>
+<p>Practical learning sessions on HACCP, FSMS, and risk thinking.</p>
 </div>
 
 <div class="service">
-<i class="fa-solid fa-chart-line"></i>
-<h3>Career Development</h3>
-<p>Guidance for moving to global companies and leadership roles.</p>
+<h3>Career Growth</h3>
+<p>Helping professionals move to international companies and leadership roles.</p>
 </div>
 
 </div>
@@ -346,69 +274,43 @@ onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
 
 </section>
 
-
 <!-- TIMELINE -->
 
-<section class="timeline-section">
+<section>
 
-<h2 style="text-align:center;">My Journey in Food Safety</h2>
+<div class="container">
+
+<h2 style="text-align:center;">My Journey</h2>
 
 <div class="timeline">
 
 <div class="timeline-item">
-<div class="timeline-dot"></div>
-<div class="timeline-content">
-<h3>2010</h3>
-<p>QA/QC Supervisor – Americana (Saudi Arabia)</p>
-</div>
+<span>2010 – 2013</span>
+<h3>QC/QA Supervisor – Americana (Saudi Arabia)</h3>
 </div>
 
 <div class="timeline-item">
-<div class="timeline-dot"></div>
-<div class="timeline-content">
-<h3>2014</h3>
-<p>Food Safety Specialist – Juhayna</p>
-</div>
+<span>2014 – 2015</span>
+<h3>Food Safety Specialist – Juhayna</h3>
 </div>
 
 <div class="timeline-item">
-<div class="timeline-dot"></div>
-<div class="timeline-content">
-<h3>2015</h3>
-<p>Food Safety & Quality Manager – Carrefour Hypermarkets</p>
-</div>
+<span>2015 – 2024</span>
+<h3>Food Safety & QA Manager – Carrefour Egypt</h3>
 </div>
 
 <div class="timeline-item">
-<div class="timeline-dot"></div>
-<div class="timeline-content">
-<h3>2018</h3>
-<p>Supplier Quality Development – Carrefour</p>
-</div>
+<span>2025 – Present</span>
+<h3>Total Quality Manager – Middle East for Raw Materials</h3>
 </div>
 
-<div class="timeline-item">
-<div class="timeline-dot"></div>
-<div class="timeline-content">
-<h3>2022</h3>
-<p>Food Safety & QA Manager – Carrefour E-commerce</p>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-dot"></div>
-<div class="timeline-content">
-<h3>2025</h3>
-<p>Total Quality Manager – Middle East for Raw Materials</p>
-</div>
 </div>
 
 </div>
 
 </section>
 
-
-<!-- THINKING -->
+<!-- FOOD SAFETY THINKING -->
 
 <section class="thinking">
 
@@ -417,12 +319,11 @@ onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
 <h2>Food Safety Thinking</h2>
 
 <p class="quote">
-“Food safety systems fail not because SOPs are missing,
-but because people do not understand the risk.”
+“Food safety systems fail not because SOPs are missing — but because risks are not understood.”
 </p>
 
 <p class="quote">
-“Storage temperature is not a number — it is a biological control.”
+“Temperature is not a number. It is a biological control.”
 </p>
 
 <p class="quote">
@@ -432,7 +333,6 @@ but because people do not understand the risk.”
 </div>
 
 </section>
-
 
 <!-- CONTACT -->
 
@@ -458,12 +358,11 @@ LinkedIn
 
 </section>
 
-
 <!-- FOOTER -->
 
 <div class="footer">
 
-© 2026 Belal Abdelfattah — Food Safety Coach & Mentor
+© 2026 Belal Abdelfattah | Food Safety Coach
 
 </div>
 
