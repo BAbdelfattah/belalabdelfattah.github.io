@@ -3,13 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Belal Abdelfattah | Food Safety Coach</title>
 
 <style>
 
 /* ===== Global ===== */
-
 body{
 margin:0;
 font-family:Segoe UI, Arial;
@@ -31,7 +29,6 @@ margin:auto;
 }
 
 /* ===== Navbar ===== */
-
 .navbar{
 display:flex;
 justify-content:space-between;
@@ -55,8 +52,17 @@ color:#333;
 font-weight:500;
 }
 
-/* ===== HERO ===== */
+.language-toggle {
+background: #22c55e;
+color: white;
+padding:6px 12px;
+border-radius:6px;
+font-weight:600;
+margin-left:15px;
+cursor:pointer;
+}
 
+/* ===== HERO ===== */
 .hero{
 background:linear-gradient(135deg,#0b7a3e,#22c55e,#15803d);
 text-align:center;
@@ -101,7 +107,6 @@ color:white;
 }
 
 /* ===== Services ===== */
-
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -117,7 +122,6 @@ background:white;
 }
 
 /* ===== Timeline ===== */
-
 .timeline{
 max-width:700px;
 margin:auto;
@@ -137,7 +141,6 @@ font-weight:600;
 }
 
 /* ===== Thinking ===== */
-
 .thinking{
 background:#f3f4f6;
 text-align:center;
@@ -151,7 +154,6 @@ color:#555;
 }
 
 /* ===== Contact ===== */
-
 .contact{
 text-align:center;
 background:#f3f4f6;
@@ -166,7 +168,6 @@ cursor:pointer;
 }
 
 /* ===== Footer ===== */
-
 .footer{
 background:#111;
 color:#aaa;
@@ -176,9 +177,7 @@ font-size:14px;
 }
 
 /* ===== Mobile ===== */
-
 @media(max-width:768px){
-
 .hero h1{
 font-size:32px;
 }
@@ -186,7 +185,6 @@ font-size:32px;
 .nav-links{
 display:none;
 }
-
 }
 
 </style>
@@ -195,24 +193,23 @@ display:none;
 <body>
 
 <!-- NAVBAR -->
-
 <div class="navbar">
 
-<div class="logo">
-Belal Abdelfattah
-</div>
+<div class="logo">Belal Abdelfattah</div>
 
-<div class="nav-links">
-<a href="#">Home</a>
-<a href="#">Mentorship</a>
-<a href="insights.html">Insights</a>
-<a href="#contact">Contact</a>
+<div>
+  <div class="nav-links" style="display:inline;">
+    <a href="#">Home</a>
+    <a href="#">Mentorship</a>
+    <a href="insights.html">Insights</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="language-toggle" onclick="alert('Switch to Arabic version')">العربية</button>
 </div>
 
 </div>
 
 <!-- HERO -->
-
 <section class="hero">
 
 <h1>Belal Abdelfattah</h1>
@@ -239,7 +236,6 @@ Connect on LinkedIn
 </section>
 
 <!-- HOW I HELP -->
-
 <section>
 
 <div class="container">
@@ -275,7 +271,6 @@ Connect on LinkedIn
 </section>
 
 <!-- TIMELINE -->
-
 <section>
 
 <div class="container">
@@ -311,7 +306,6 @@ Connect on LinkedIn
 </section>
 
 <!-- FOOD SAFETY THINKING -->
-
 <section class="thinking">
 
 <div class="container">
@@ -335,7 +329,6 @@ Connect on LinkedIn
 </section>
 
 <!-- CONTACT -->
-
 <section class="contact" id="contact">
 
 <div class="container">
@@ -359,7 +352,6 @@ LinkedIn
 </section>
 
 <!-- FOOTER -->
-
 <div class="footer">
 
 © 2026 Belal Abdelfattah | Food Safety Coach
