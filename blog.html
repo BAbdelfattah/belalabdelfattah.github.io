@@ -17,6 +17,21 @@ background:#1e7f5c;
 color:white;
 padding:20px;
 text-align:center;
+position:relative;
+}
+
+.lang{
+position:absolute;
+right:20px;
+top:20px;
+}
+
+.lang button{
+padding:6px 12px;
+border:none;
+border-radius:4px;
+cursor:pointer;
+margin-left:5px;
 }
 
 .container{
@@ -53,46 +68,119 @@ margin-top:10px;
 background:#155a41;
 }
 
+.ar{
+display:none;
+direction:rtl;
+text-align:right;
+}
+
 </style>
+
+<script>
+
+function setLanguage(lang){
+
+let en=document.querySelectorAll(".en");
+let ar=document.querySelectorAll(".ar");
+
+if(lang=="en"){
+en.forEach(el=>el.style.display="block");
+ar.forEach(el=>el.style.display="none");
+}
+
+if(lang=="ar"){
+en.forEach(el=>el.style.display="none");
+ar.forEach(el=>el.style.display="block");
+}
+
+}
+
+</script>
+
 </head>
 
 <body>
 
 <header>
-<h1>Blog</h1>
-<p>Food Safety & Quality Articles</p>
+
+<h1 class="en">Blog</h1>
+<h1 class="ar">المدونة</h1>
+
+<p class="en">Food Safety & Quality Articles</p>
+<p class="ar">مقالات في سلامة الغذاء والجودة</p>
+
+<div class="lang">
+<button onclick="setLanguage('en')">EN</button>
+<button onclick="setLanguage('ar')">AR</button>
+</div>
+
 </header>
 
 <div class="container">
 
 <div class="category">
-<h2>Food Safety Basics</h2>
-<p>Articles about food safety fundamentals.</p>
-<a class="button" href="food-safety-basics.html">Explore</a>
+
+<h2 class="en">Food Safety Basics</h2>
+<h2 class="ar">أساسيات سلامة الغذاء</h2>
+
+<p class="en">Articles about food safety fundamentals.</p>
+<p class="ar">مقالات حول المفاهيم الأساسية لسلامة الغذاء.</p>
+
+<a class="button en" href="food-safety-basics.html">Explore</a>
+<a class="button ar" href="food-safety-basics.html">استكشاف</a>
+
 </div>
 
 <div class="category">
-<h2>Food Safety Systems</h2>
-<p>HACCP, ISO 22000 and food safety management systems.</p>
-<a class="button" href="food-safety-systems.html">Explore</a>
+
+<h2 class="en">Food Safety Systems</h2>
+<h2 class="ar">أنظمة سلامة الغذاء</h2>
+
+<p class="en">HACCP, ISO 22000 and food safety management systems.</p>
+<p class="ar">نظام الهاسب و ISO 22000 وأنظمة إدارة سلامة الغذاء.</p>
+
+<a class="button en" href="food-safety-systems.html">Explore</a>
+<a class="button ar" href="food-safety-systems.html">استكشاف</a>
+
 </div>
 
 <div class="category">
-<h2>Food Facility Design</h2>
-<p>Design of food factories, kitchens and processing areas.</p>
-<a class="button" href="facility-design.html">Explore</a>
+
+<h2 class="en">Food Facility Design</h2>
+<h2 class="ar">تصميم المنشآت الغذائية</h2>
+
+<p class="en">Design of food factories, kitchens and processing areas.</p>
+<p class="ar">تصميم مصانع الغذاء والمطابخ ومناطق المعالجة.</p>
+
+<a class="button en" href="facility-design.html">Explore</a>
+<a class="button ar" href="facility-design.html">استكشاف</a>
+
 </div>
 
 <div class="category">
-<h2>Pest Control</h2>
-<p>Pest management in food facilities.</p>
-<a class="button" href="pest-control.html">Explore</a>
+
+<h2 class="en">Pest Control</h2>
+<h2 class="ar">مكافحة الآفات</h2>
+
+<p class="en">Pest management in food facilities.</p>
+<p class="ar">إدارة ومكافحة الآفات في المنشآت الغذائية.</p>
+
+<a class="button en" href="pest-control.html">Explore</a>
+<a class="button ar" href="pest-control.html">استكشاف</a>
+
 </div>
 
 <div class="category">
-<h2>Career Development</h2>
-<p>Career tips for food safety professionals.</p>
-<a class="button" href="career.html">Explore</a>
+
+<h2 class="en">Career Development</h2>
+<h2 class="ar">التطوير المهني</h2>
+
+<p class="en">Career tips for food safety professionals.</p>
+<p class="ar">نصائح مهنية لمتخصصي سلامة الغذاء.</p>
+
+<a class="button en" href="career.html">Explore</a>
+<a class="button ar" href="career.html">استكشاف</a>
+
 </div>
 
 </div>
