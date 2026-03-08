@@ -36,13 +36,36 @@ top:0;
 z-index:1000;
 }
 
-.logo{font-weight:700;font-size:18px;}
+/* Logo Area */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-area img{
+height:42px;
+width:auto;
+border-radius:4px;
+}
+
+.logo-text{
+font-weight:700;
+font-size:18px;
+}
+
+/* Navigation Links */
 
 .nav-links a{
 margin-left:20px;
 text-decoration:none;
 color:#333;
 font-weight:500;
+}
+
+.nav-links a:hover{
+color:#16a34a;
 }
 
 
@@ -220,19 +243,20 @@ display:none;
 
 <div class="navbar">
 
-<div class="logo">Belal Abdelfattah</div>
+<div class="logo-area">
+
+<img src="logo.jfif" alt="Food Safety Mentor Logo">
+
+<div class="logo-text">Belal Abdelfattah</div>
+
+</div>
 
 <div class="nav-links">
 
 <a href="#">Home</a>
-
 <a href="#">Mentorship</a>
-
-<!-- BLOG LINK ADDED -->
 <a href="blog.html">Blog</a>
-
 <a href="#">Insights</a>
-
 <a href="#contact">Contact</a>
 
 </div>
@@ -401,9 +425,7 @@ onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">L
 
 <button class="booking"
 onclick="window.open('https://calendly.com/babdelfattah2022/career-coaching-sessions','_blank')">
-
 Book a Session
-
 </button>
 
 </div>
