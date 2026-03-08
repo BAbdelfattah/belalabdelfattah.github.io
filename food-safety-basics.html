@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <meta charset="UTF-8">
-<title>Food Safety Basics</title>
+<title>Food Safety Basics | Belal Abdelfattah</title>
 
 <style>
 
@@ -17,6 +19,21 @@ background:#1e7f5c;
 color:white;
 padding:20px;
 text-align:center;
+position:relative;
+}
+
+.lang{
+position:absolute;
+right:20px;
+top:20px;
+}
+
+.lang button{
+padding:6px 12px;
+border:none;
+border-radius:4px;
+cursor:pointer;
+margin-left:5px;
 }
 
 .container{
@@ -28,19 +45,20 @@ margin-top:30px;
 
 .article{
 background:white;
-padding:20px;
-margin-bottom:15px;
-border-radius:8px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+padding:25px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
 }
 
 .article h3{
 margin-top:0;
+color:#1e7f5c;
 }
 
 .button{
 display:inline-block;
-padding:8px 15px;
+padding:10px 18px;
 background:#1e7f5c;
 color:white;
 text-decoration:none;
@@ -48,57 +66,122 @@ border-radius:5px;
 margin-top:10px;
 }
 
+.button:hover{
+background:#155a41;
+}
+
+.ar{
+display:none;
+direction:rtl;
+text-align:right;
+}
+
 </style>
+
+<script>
+
+function setLanguage(lang){
+
+let en=document.querySelectorAll(".en");
+let ar=document.querySelectorAll(".ar");
+
+if(lang=="en"){
+en.forEach(el=>el.style.display="block");
+ar.forEach(el=>el.style.display="none");
+}
+
+if(lang=="ar"){
+en.forEach(el=>el.style.display="none");
+ar.forEach(el=>el.style.display="block");
+}
+
+}
+
+</script>
 
 </head>
 
 <body>
 
 <header>
-<h1>Food Safety Basics</h1>
-<p>Fundamental knowledge of food safety</p>
+
+<h1 class="en">Food Safety Basics</h1>
+<h1 class="ar">أساسيات سلامة الغذاء</h1>
+
+<p class="en">Fundamental knowledge every food safety professional should know</p>
+<p class="ar">المعرفة الأساسية التي يجب أن يعرفها كل متخصص في سلامة الغذاء</p>
+
+<div class="lang">
+<button onclick="setLanguage('en')">EN</button>
+<button onclick="setLanguage('ar')">AR</button>
+</div>
+
 </header>
 
 <div class="container">
 
 <div class="article">
 
-<h3>What is Food Safety?</h3>
+<h3 class="en">What is Food Safety?</h3>
+<h3 class="ar">ما هي سلامة الغذاء؟</h3>
 
-<p>
-Understanding the concept of food safety and why it is critical
-for public health and food businesses.
+<p class="en">
+An introduction to the concept of food safety and its importance
+for protecting consumers and ensuring safe food production.
 </p>
 
-<a class="button" href="article-food-safety.html">Read Article</a>
+<p class="ar">
+مقدمة حول مفهوم سلامة الغذاء وأهميته في حماية المستهلك
+وضمان إنتاج غذاء آمن.
+</p>
+
+<a class="button en" href="what-is-food-safety.html">Read Article</a>
+<a class="button ar" href="what-is-food-safety.html">قراءة المقال</a>
 
 </div>
 
 <div class="article">
 
-<h3>Food Safety Hazards</h3>
+<h3 class="en">Types of Food Safety Hazards</h3>
+<h3 class="ar">أنواع مخاطر سلامة الغذاء</h3>
 
-<p>
-Biological, chemical and physical hazards in food production.
+<p class="en">
+Understanding biological, chemical and physical hazards
+in food production environments.
 </p>
 
-<a class="button" href="food-hazards.html">Read Article</a>
+<p class="ar">
+فهم المخاطر البيولوجية والكيميائية والفيزيائية
+في بيئات إنتاج الغذاء.
+</p>
+
+<a class="button en" href="food-safety-hazards.html">Read Article</a>
+<a class="button ar" href="food-safety-hazards.html">قراءة المقال</a>
 
 </div>
 
 <div class="article">
 
-<h3>Food Safety Culture</h3>
+<h3 class="en">Food Safety Culture</h3>
+<h3 class="ar">ثقافة سلامة الغذاء</h3>
 
-<p>
-Why food safety culture is essential for successful systems.
+<p class="en">
+Why building a strong food safety culture is essential
+for successful food safety systems.
 </p>
 
-<a class="button" href="food-safety-culture.html">Read Article</a>
+<p class="ar">
+لماذا تعتبر ثقافة سلامة الغذاء القوية
+أساسية لنجاح أنظمة سلامة الغذاء.
+</p>
+
+<a class="button en" href="food-safety-culture.html">Read Article</a>
+<a class="button ar" href="food-safety-culture.html">قراءة المقال</a>
 
 </div>
 
 </div>
 
 </body>
+
 </html>
