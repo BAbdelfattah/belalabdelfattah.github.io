@@ -115,8 +115,6 @@ font-size:16px;
 font-weight:600;
 cursor:pointer;
 }
-.whatsapp{background:#25D366;color:white;}
-.linkedin{background:#0077b5;color:white;}
 .booking{background:#00a2ff;color:white;transition:opacity 0.3s, transform 0.2s;}
 .cta-buttons button:hover{opacity:0.85;}
 .booking:hover{transform:translateY(-2px);}
@@ -185,6 +183,50 @@ transition:opacity 0.3s, transform 0.2s;
 transform:translateY(-2px);
 }
 
+/* ===== Floating WhatsApp Button ===== */
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:2px 2px 12px rgba(0,0,0,0.3);
+z-index:1000;
+transition:0.3s;
+cursor:pointer;
+}
+.whatsapp-float img{
+width:34px;
+height:34px;
+}
+.whatsapp-float:hover{
+transform:scale(1.1);
+background:#1ebe5d;
+}
+
+/* Tooltip */
+.whatsapp-tooltip{
+position:fixed;
+bottom:35px;
+right:100px;
+background:#222;
+color:white;
+padding:8px 14px;
+border-radius:6px;
+font-size:14px;
+opacity:0;
+transition:0.3s;
+white-space:nowrap;
+}
+.whatsapp-float:hover + .whatsapp-tooltip{
+opacity:1;
+}
+
 /* ===== Footer ===== */
 .footer{
 background:#111;
@@ -249,14 +291,7 @@ color:white;
 <p class="ar" style="display:none;">مدرب ومستشار سلامة الغذاء يساعد المتخصصين على بناء أنظمة HACCP قوية، واجتياز عمليات التدقيق، وتطوير مسيرات مهنية مؤثرة في صناعة الغذاء.</p>
 
 <div class="cta-buttons">
-<button class="whatsapp" onclick="window.location.href='https://wa.me/201271401270'">
-<span class="en">Chat on WhatsApp</span>
-<span class="ar" style="display:none;">الدردشة على واتساب</span>
-</button>
-<button class="linkedin" onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">
-<span class="en">Connect on LinkedIn</span>
-<span class="ar" style="display:none;">الاتصال على لينكدإن</span>
-</button>
+<!-- Only keep Book a Session -->
 <button class="booking" onclick="window.open('https://calendly.com/babdelfattah2022/career-coaching-sessions','_blank')">
 <span class="en">Book a Session</span>
 <span class="ar" style="display:none;">احجز جلسة</span>
@@ -329,8 +364,6 @@ color:white;
 <div class="container">
 <h2>Start Your Journey</h2>
 <p>Ready to grow your food safety career?</p>
-<button class="whatsapp" onclick="window.location.href='https://wa.me/201271401270'">WhatsApp</button>
-<button class="linkedin" onclick="window.location.href='https://www.linkedin.com/in/belalabdelfattah/'">LinkedIn</button>
 <button class="booking" onclick="window.open('https://calendly.com/babdelfattah2022/career-coaching-sessions','_blank')">Book a Session</button>
 </div>
 </section>
@@ -339,6 +372,16 @@ color:white;
 <div class="footer">
 © 2026 Belal Abdelfattah | Food Safety Coach
 </div>
+
+<!-- Floating WhatsApp Button -->
+<a 
+href="https://wa.me/201271401270?text=Hello%20Belal,%0AI%20found%20your%20website%20and%20I%20am%20interested%20in%20a%20Food%20Safety%20coaching%20session.%0A%0ACould%20you%20please%20tell%20me:%0A1.%20What%20is%20your%20current%20role%20in%20food%20safety?%0A2.%20What%20challenge%20are%20you%20facing%20right%20now?%0A3.%20Are%20you%20preparing%20for%20an%20audit%20or%20career%20transition?"
+class="whatsapp-float"
+target="_blank"
+>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<div class="whatsapp-tooltip">Chat with Belal</div>
 
 <script>
 function toggleLang(){
@@ -352,12 +395,11 @@ const ar=document.querySelectorAll('.ar');
 en.forEach(el=>el.style.display=(el.style.display==='none')?'block':'none');
 ar.forEach(el=>el.style.display=(el.style.display==='none')?'block':'none');
 
-// Move slider visually
 const slider=document.querySelector('.slider');
 if(body.classList.contains('arabic')){
-  slider.style.left='45px';
+slider.style.left='45px';
 }else{
-  slider.style.left='2px';
+slider.style.left='2px';
 }
 }
 </script>
