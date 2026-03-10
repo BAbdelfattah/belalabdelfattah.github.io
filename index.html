@@ -119,23 +119,6 @@ section{padding:80px 20px;}
   background:white;
 }
 
-/* ===== Timeline ===== */
-.timeline{
-  max-width:700px;
-  margin:auto;
-  margin-top:40px;
-}
-.timeline-item{
-  padding:20px;
-  border-left:4px solid #22c55e;
-  margin-bottom:20px;
-  background:#f9fafb;
-}
-.timeline-item span{
-  color:#16a34a;
-  font-weight:600;
-}
-
 /* ===== Thinking ===== */
 .thinking{
   background:#f3f4f6;
@@ -227,20 +210,6 @@ body.arabic{
   direction:rtl;
   font-family:'Cairo', sans-serif;
 }
-body.arabic .nav-links a{
-  margin-right:20px;
-  margin-left:0;
-}
-body.arabic .timeline-item{
-  text-align:right;
-}
-body.arabic .hero p{
-  color:white;
-}
-body.arabic .thinking h2,
-body.arabic .thinking .quote{
-  color:black; /* Thinking section black in Arabic */
-}
 
 /* ===== Mobile ===== */
 @media(max-width:768px){
@@ -256,10 +225,17 @@ body.arabic .thinking .quote{
   <div class="logo-text">Belal Abdelfattah</div>
 
   <div class="nav-links">
-    <a href="#">About Me</a>
-    <a href="#">Guides</a>
-    <a href="blog.html">Blog</a>
-    <a href="#contact">Contact</a>
+    <!-- English -->
+    <a href="#" class="en">About Me</a>
+    <a href="#" class="en" id="en-guides">Field Guide</a>
+    <a href="blog.html" class="en">Blog</a>
+    <a href="#contact" class="en">Contact</a>
+
+    <!-- Arabic -->
+    <a href="#" class="ar" style="display:none;">عنّي</a>
+    <a href="#" class="ar" id="ar-guides" style="display:none;">دليل الميدان</a>
+    <a href="blog.html" class="ar" style="display:none;">المدونة</a>
+    <a href="#contact" class="ar" style="display:none;">اتصل</a>
   </div>
 
   <!-- Language Toggle -->
@@ -340,7 +316,7 @@ body.arabic .thinking .quote{
 © 2026 Belal Abdelfattah | Food Safety Coach
 </div>
 
-<!-- Floating WhatsApp Button -->
+<!-- WhatsApp -->
 <a href="https://wa.me/201271401270" class="whatsapp-float" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
@@ -352,18 +328,24 @@ function toggleLang(){
   body.classList.toggle('arabic');
   body.classList.toggle('english');
 
-  const en=document.querySelectorAll('.en');
-  const ar=document.querySelectorAll('.ar');
+  const enLinks=document.querySelectorAll('.nav-links .en');
+  const arLinks=document.querySelectorAll('.nav-links .ar');
 
-  en.forEach(el=>el.style.display=(el.style.display==='none')?'block':'none');
-  ar.forEach(el=>el.style.display=(el.style.display==='none')?'block':'none');
+  if(body.classList.contains('arabic')){
+    enLinks.forEach(a=>a.style.display='none');
+    arLinks.forEach(a=>a.style.display='inline-block');
+  } else {
+    enLinks.forEach(a=>a.style.display='inline-block');
+    arLinks.forEach(a=>a.style.display='none');
+  }
+
+  const allEn=document.querySelectorAll('.en');
+  const allAr=document.querySelectorAll('.ar');
+  allEn.forEach(el=>el.style.display=body.classList.contains('arabic')?'none':'block');
+  allAr.forEach(el=>el.style.display=body.classList.contains('arabic')?'block':'none');
 
   const slider=document.querySelector('.slider');
-  if(body.classList.contains('arabic')){
-    slider.style.left='45px';
-  }else{
-    slider.style.left='2px';
-  }
+  slider.style.left=body.classList.contains('arabic')?'45px':'2px';
 }
 </script>
 
