@@ -41,6 +41,26 @@ margin:auto;
 margin-top:40px;
 }
 
+.filters{
+text-align:center;
+margin-bottom:30px;
+}
+
+.filters button{
+padding:8px 16px;
+margin:5px;
+border:none;
+border-radius:6px;
+background:#ddd;
+cursor:pointer;
+font-weight:bold;
+}
+
+.filters button:hover{
+background:#1e7f5c;
+color:white;
+}
+
 .post{
 background:white;
 padding:25px;
@@ -52,12 +72,6 @@ box-shadow:0 3px 8px rgba(0,0,0,0.1);
 .post h2{
 margin-top:0;
 color:#1e7f5c;
-}
-
-.meta{
-font-size:14px;
-color:#777;
-margin-bottom:12px;
 }
 
 .read{
@@ -88,14 +102,34 @@ let en=document.querySelectorAll(".en");
 let ar=document.querySelectorAll(".ar");
 
 if(lang=="en"){
-en.forEach(el=>el.style.display="block");
+en.forEach(el=>el.style.display="inline");
 ar.forEach(el=>el.style.display="none");
 }
 
 if(lang=="ar"){
 en.forEach(el=>el.style.display="none");
-ar.forEach(el=>el.style.display="block");
+ar.forEach(el=>el.style.display="inline");
 }
+
+}
+
+function filterPosts(category){
+
+let posts=document.querySelectorAll(".post");
+
+posts.forEach(post=>{
+
+if(category=="all"){
+post.style.display="block";
+}
+else if(post.classList.contains(category)){
+post.style.display="block";
+}
+else{
+post.style.display="none";
+}
+
+});
 
 }
 
@@ -122,13 +156,27 @@ ar.forEach(el=>el.style.display="block");
 
 <div class="container">
 
-<div class="post">
+<div class="filters">
+
+<button class="en" onclick="filterPosts('all')">All</button>
+<button class="ar" onclick="filterPosts('all')">الكل</button>
+
+<button class="en" onclick="filterPosts('foodsafety')">Food Safety</button>
+<button class="ar" onclick="filterPosts('foodsafety')">سلامة الغذاء</button>
+
+<button class="en" onclick="filterPosts('pest')">Pest Control</button>
+<button class="ar" onclick="filterPosts('pest')">مكافحة الآفات</button>
+
+<button class="en" onclick="filterPosts('career')">Career</button>
+<button class="ar" onclick="filterPosts('career')">المسار المهني</button>
+
+</div>
+
+
+<div class="post foodsafety">
 
 <h2 class="en">What Inspectors Look for During a Food Safety Audit</h2>
 <h2 class="ar">ما الذي يبحث عنه المفتشون أثناء التفتيش الغذائي؟</h2>
-
-<div class="meta en">March 2026 · 3 min read</div>
-<div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
 
 <p class="en">
 Many facilities fail food safety inspections not because they lack systems,
@@ -146,13 +194,10 @@ but because they don't understand what inspectors are actually assessing.
 </div>
 
 
-<div class="post">
+<div class="post pest">
 
 <h2 class="en">Why Pest Control Is Critical in Food Facilities</h2>
 <h2 class="ar">لماذا تعتبر مكافحة الآفات أمراً أساسياً في المنشآت الغذائية؟</h2>
-
-<div class="meta en">February 2026 · 2 min read</div>
-<div class="meta ar">فبراير 2026 · دقيقتان قراءة</div>
 
 <p class="en">
 Pest control is not just about eliminating insects or rodents.
@@ -170,13 +215,10 @@ It is about protecting food safety and maintaining regulatory compliance.
 </div>
 
 
-<div class="post">
+<div class="post career">
 
 <h2 class="en">How Food Safety Professionals Can Advance Their Careers</h2>
 <h2 class="ar">كيف يطور متخصصو سلامة الغذاء مسارهم المهني؟</h2>
-
-<div class="meta en">January 2026 · 4 min read</div>
-<div class="meta ar">يناير 2026 · 4 دقائق قراءة</div>
 
 <p class="en">
 Technical knowledge alone is not enough to grow in the food safety field.
