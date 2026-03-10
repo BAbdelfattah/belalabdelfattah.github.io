@@ -6,7 +6,6 @@
 <title>Belal Abdelfattah | Food Safety Coach & Mentor</title>
 
 <style>
-
 /* ===== Global ===== */
 body{
   margin:0;
@@ -31,25 +30,22 @@ section{padding:80px 20px;}
   top:0;
   z-index:1000;
 }
-
-/* Logo Area */
 .logo-text{
   font-weight:700;
   font-size:18px;
 }
-
-/* Navigation Links */
 .nav-links a{
-  margin-left:20px;
+  margin-left:25px;
   text-decoration:none;
   color:#333;
   font-weight:500;
+  transition:0.3s;
 }
 .nav-links a:hover{
   color:#16a34a;
 }
 
-/* ===== Language Toggle (modern) ===== */
+/* ===== Language Toggle ===== */
 .lang-switch {
   display:flex;
   align-items:center;
@@ -243,15 +239,14 @@ body.arabic .hero p{
 }
 body.arabic .thinking h2,
 body.arabic .thinking .quote{
-  color:black; /* Change thinking section to black */
+  color:black; /* Thinking section black in Arabic */
 }
 
 /* ===== Mobile ===== */
 @media(max-width:768px){
   .hero h1{font-size:32px;}
-  .nav-links{display:none;}
+  .nav-links{flex-direction:column;gap:10px;}
 }
-
 </style>
 </head>
 <body class="english">
@@ -261,14 +256,13 @@ body.arabic .thinking .quote{
   <div class="logo-text">Belal Abdelfattah</div>
 
   <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Mentorship</a>
+    <a href="#">About Me</a>
+    <a href="#">Guides</a>
     <a href="blog.html">Blog</a>
-    <a href="#">Insights</a>
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- Modern Language Toggle -->
+  <!-- Language Toggle -->
   <div class="lang-switch" onclick="toggleLang()">
     <span>EN</span>
     <span>ع</span>
