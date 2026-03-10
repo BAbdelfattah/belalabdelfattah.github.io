@@ -34,8 +34,11 @@ section{padding:80px 20px;}
   font-weight:700;
   font-size:18px;
 }
+.nav-links{
+  display:flex;
+  gap:25px;
+}
 .nav-links a{
-  margin-left:25px;
   text-decoration:none;
   color:#333;
   font-weight:500;
@@ -210,11 +213,17 @@ body.arabic{
   direction:rtl;
   font-family:'Cairo', sans-serif;
 }
+body.arabic .nav-links{
+  flex-direction:row; /* keep horizontal */
+}
 
 /* ===== Mobile ===== */
 @media(max-width:768px){
   .hero h1{font-size:32px;}
-  .nav-links{flex-direction:column;gap:10px;}
+  .nav-links{
+    flex-wrap:wrap;
+    gap:10px;
+  }
 }
 </style>
 </head>
@@ -227,13 +236,13 @@ body.arabic{
   <div class="nav-links">
     <!-- English -->
     <a href="#" class="en">About Me</a>
-    <a href="#" class="en" id="en-guides">Field Guide</a>
+    <a href="#" class="en">Guides</a>
     <a href="blog.html" class="en">Blog</a>
     <a href="#contact" class="en">Contact</a>
 
     <!-- Arabic -->
     <a href="#" class="ar" style="display:none;">عنّي</a>
-    <a href="#" class="ar" id="ar-guides" style="display:none;">دليل الميدان</a>
+    <a href="#" class="ar" style="display:none;">دليل الميدان</a>
     <a href="blog.html" class="ar" style="display:none;">المدونة</a>
     <a href="#contact" class="ar" style="display:none;">اتصل</a>
   </div>
@@ -286,16 +295,6 @@ body.arabic{
 <p><span class="en">Helping professionals move to international companies and leadership roles.</span><span class="ar" style="display:none;">مساعدة المتخصصين على الانتقال للشركات الدولية والمناصب القيادية.</span></p>
 </div>
 </div>
-</div>
-</section>
-
-<!-- THINKING -->
-<section class="thinking">
-<div class="container">
-<h2><span class="en">Food Safety Thinking</span><span class="ar" style="display:none;">تفكير سلامة الغذاء</span></h2>
-<p class="quote"><span class="en">“Food safety systems fail not because SOPs are missing — but because risks are not understood.”</span><span class="ar" style="display:none;">"تفشل أنظمة سلامة الغذاء ليس بسبب غياب الإجراءات — بل لأن المخاطر غير مفهومة."</span></p>
-<p class="quote"><span class="en">“Temperature is not a number. It is a biological control.”</span><span class="ar" style="display:none;">"الحرارة ليست رقماً. إنها عنصر تحكم بيولوجي."</span></p>
-<p class="quote"><span class="en">“Audits do not create food safety systems. Thinking does.”</span><span class="ar" style="display:none;">"التدقيق لا ينشئ أنظمة سلامة الغذاء. التفكير هو من يفعل."</span></p>
 </div>
 </section>
 
