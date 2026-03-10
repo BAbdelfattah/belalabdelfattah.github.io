@@ -1,1 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Field Guide | Belal Abdelfattah</title>
 
+<style>
+body{font-family: Arial, sans-serif; background:#f5f5f5; margin:0;}
+header{background:#1e7f5c; color:white; padding:25px; text-align:center; position:relative;}
+.lang{position:absolute; right:20px; top:20px;}
+.lang button{padding:6px 12px; border:none; border-radius:4px; cursor:pointer; margin-left:5px;}
+.container{width:90%; max-width:850px; margin:auto; margin-top:40px;}
+.filters{text-align:center; margin-bottom:30px; display:flex; flex-wrap:wrap; justify-content:center; gap:8px;}
+.filters button{padding:8px 14px; border:none; border-radius:6px; background:#ddd; cursor:pointer; font-weight:bold;}
+.filters button:hover{background:#1e7f5c; color:white;}
+.post{background:white; padding:25px; margin-bottom:20px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); display:flex; flex-direction: column; align-items: flex-start;}
+.post h2{margin:0; color:#1e7f5c;}
+.meta{font-size:14px; color:#777; margin:5px 0 10px 0;}
+.read{display:inline-block; margin-top:5px; text-decoration:none; color:#1e7f5c; font-weight:bold;}
+.read:hover{text-decoration:underline;}
+.ar{display:none; direction:rtl; text-align:right;}
+.article-info{display:flex; flex-direction: column;}
+</style>
+
+<script>
+function setLanguage(lang){
+  let en=document.querySelectorAll(".en");
+  let ar=document.querySelectorAll(".ar");
+
+  if(lang=="en"){en.forEach(el=>el.style.display="block"); ar.forEach(el=>el.style.display="none");}
+  if(lang=="ar"){en.forEach(el=>el.style.display="none"); ar.forEach(el=>el.style.display="block");}
+}
+
+function filterPosts(category){
+  let posts=document.querySelectorAll(".post");
+  posts.forEach(post=>{
+    if(category=="all"){post.style.display="flex";}
+    else if(post.classList.contains(category)){post.style.display="flex";}
+    else{post.style.display="none";}
+  });
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1 class="en">Field Guide</h1>
+  <h1 class="ar">دليل الميدان</h1>
+
+  <p class="en">Practical Guides on Food Safety & Careers in Egypt</p>
+  <p class="ar">أدلة عملية حول سلامة الغذاء والمسيرات المهنية في مصر</p>
+
+  <div class="lang">
+    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('ar')">AR</button>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="filters">
+  <!-- English -->
+  <button class="en" onclick="filterPosts('all')">All</button>
+  <button class="en" onclick="filterPosts('career')">Career</button>
+  <button class="en" onclick="filterPosts('haccp')">HACCP</button>
+  <button class="en" onclick="filterPosts('operations')">Operations</button>
+
+  <!-- Arabic -->
+  <button class="ar" onclick="filterPosts('all')">الكل</button>
+  <button class="ar" onclick="filterPosts('career')">المسار المهني</button>
+  <button class="ar" onclick="filterPosts('haccp')">الهاسب</button>
+  <button class="ar" onclick="filterPosts('operations')">العمليات</button>
+</div>
+
+<!-- ================== 15 Guides ================== -->
+
+<!-- 1 -->
+<div class="post career">
+  <div class="article-info">
+    <h2 class="en">How to Start a Career in Food Safety in Egypt</h2>
+    <h2 class="ar">كيف تبدأ مسيرتك في سلامة الغذاء في مصر</h2>
+    <div class="meta en">March 2026 · 4 min read</div>
+    <div class="meta ar">مارس 2026 · 4 دقائق قراءة</div>
+    <p class="en">Degrees accepted, first job options, internships, and skills employers expect.</p>
+    <p class="ar">الشهادات المقبولة، خيارات الوظائف الأولى، التدريب، والمهارات المطلوبة من أصحاب العمل.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="post career">
+  <div class="article-info">
+    <h2 class="en">Food Safety Career Paths Explained</h2>
+    <h2 class="ar">شرح مسارات مهنة سلامة الغذاء</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">QA, QC, food safety, production, auditing, and consulting roles.</p>
+    <p class="ar">أدوار الجودة، مراقبة الجودة، سلامة الغذاء، الإنتاج، التدقيق، والاستشارات.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="post operations">
+  <div class="article-info">
+    <h2 class="en">How Food Safety Departments Work in Food Companies</h2>
+    <h2 class="ar">كيفية عمل أقسام سلامة الغذاء في الشركات</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">QA managers, hygiene teams, lab teams, and documentation teams.</p>
+    <p class="ar">مديرو الجودة، فرق النظافة، فرق المختبر، وفرق التوثيق.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="post operations">
+  <div class="article-info">
+    <h2 class="en">Industrial Areas in Egypt with Food Factories</h2>
+    <h2 class="ar">المناطق الصناعية في مصر مع مصانع الغذاء</h2>
+    <div class="meta en">March 2026 · 4 min read</div>
+    <div class="meta ar">مارس 2026 · 4 دقائق قراءة</div>
+    <p class="en">6th of October, 10th of Ramadan, Obour, Borg El Arab, Sadat City; industries and hiring potential.</p>
+    <p class="ar">6 أكتوبر، 10 رمضان، العبور، برج العرب، مدينة السادات؛ الصناعات وإمكانات التوظيف.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="post operations">
+  <div class="article-info">
+    <h2 class="en">Major Food Companies in Egypt Hiring Food Safety Professionals</h2>
+    <h2 class="ar">أهم شركات الغذاء في مصر التي توظف متخصصي سلامة الغذاء</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">Nestlé, PepsiCo, Unilever, Americana, Edita; company types and available roles.</p>
+    <p class="ar">نستله، بيبسيكو، يونيليفر، أمريكانا، إيديتا؛ أنواع الشركات والأدوار المتاحة.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="post operations">
+  <div class="article-info">
+    <h2 class="en">Food Safety Authorities in Egypt</h2>
+    <h2 class="ar">الهيئات المسؤولة عن سلامة الغذاء في مصر</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">National Food Safety Authority, Ministry of Health, Local municipalities; inspections and compliance.</p>
+    <p class="ar">الهيئة القومية لسلامة الغذاء، وزارة الصحة، البلديات؛ عمليات التفتيش والامتثال.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 7 -->
+<div class="post haccp">
+  <div class="article-info">
+    <h2 class="en">Food Safety Certifications That Matter in Egypt</h2>
+    <h2 class="ar">شهادات سلامة الغذاء المهمة في مصر</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">HACCP, ISO 22000, FSSC 22000, internal auditor courses.</p>
+    <p class="ar">H.A.C.C.P، ISO 22000، FSSC 22000، دورات المدقق الداخلي.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 8 -->
+<div class="post operations">
+  <div class="article-info">
+    <h2 class="en">Types of Food Businesses and Their Food Safety Needs</h2>
+    <h2 class="ar">أنواع الأعمال الغذائية واحتياجات سلامة الغذاء الخاصة بها</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">Factories, restaurants, catering, cloud kitchens, suppliers.</p>
+    <p class="ar">المصانع، المطاعم، التموين، المطابخ السحابية، الموردين.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 9 -->
+<div class="post operations">
+  <div class="article-info">
+    <h2 class="en">Daily Tasks of a Food Safety Specialist</h2>
+    <h2 class="ar">المهام اليومية لمتخصص سلامة الغذاء</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">Inspections, temperature monitoring, hygiene verification, audits.</p>
+    <p class="ar">التفتيشات، مراقبة درجات الحرارة، التحقق من النظافة، عمليات التدقيق.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 10 -->
+<div class="post haccp">
+  <div class="article-info">
+    <h2 class="en">How Food Safety Audits Work</h2>
+    <h2 class="ar">كيفية عمل تدقيق سلامة الغذاء</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">Internal audit, external audit, certification audit.</p>
+    <p class="ar">التدقيق الداخلي، التدقيق الخارجي، تدقيق الشهادات.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 11 -->
+<div class="post haccp">
+  <div class="article-info">
+    <h2 class="en">Food Safety Documentation Every Company Must Have</h2>
+    <h2 class="ar">وثائق سلامة الغذاء التي يجب أن تمتلكها كل شركة</h2>
+    <div class="meta en">March 2026 · 4 min read</div>
+    <div class="meta ar">مارس 2026 · 4 دقائق قراءة</div>
+    <p class="en">SOPs, PRPs, HACCP plan, monitoring records.</p>
+    <p class="ar">إجراءات التشغيل القياسية، برامج الممارسات الأولية، خطة H.A.C.C.P، سجلات المراقبة.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 12 -->
+<div class="post hygiene">
+  <div class="article-info">
+    <h2 class="en">Food Safety Challenges in Restaurants</h2>
+    <h2 class="ar">تحديات سلامة الغذاء في المطاعم</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">Staff turnover, poor training, temperature control, cross contamination.</p>
+    <p class="ar">معدل دوران الموظفين، التدريب السيئ، التحكم في درجات الحرارة، التلوث المتبادل.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 13 -->
+<div class="post career">
+  <div class="article-info">
+    <h2 class="en">Skills Every Food Safety Professional Must Develop</h2>
+    <h2 class="ar">المهارات التي يجب أن يطورها كل متخصص في سلامة الغذاء</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">Communication, auditing, risk analysis, leadership.</p>
+    <p class="ar">التواصل، التدقيق، تحليل المخاطر، القيادة.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 14 -->
+<div class="post career">
+  <div class="article-info">
+    <h2 class="en">How to Prepare for a Food Safety Job Interview</h2>
+    <h2 class="ar">كيفية التحضير لمقابلة عمل في سلامة الغذاء</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">Common questions, how to answer, mistakes to avoid.</p>
+    <p class="ar">الأسئلة الشائعة، كيفية الإجابة، الأخطاء التي يجب تجنبها.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+<!-- 15 -->
+<div class="post operations">
+  <div class="article-info">
+    <h2 class="en">Practical Food Safety Tools and Checklists</h2>
+    <h2 class="ar">أدوات وقوائم التحقق العملية لسلامة الغذاء</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">Kitchen inspection checklist, receiving checklist, temperature logs.</p>
+    <p class="ar">قائمة تفتيش المطبخ، قائمة الاستلام، سجلات درجات الحرارة.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
