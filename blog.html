@@ -15,7 +15,7 @@ margin:0;
 header{
 background:#1e7f5c;
 color:white;
-padding:20px;
+padding:25px;
 text-align:center;
 position:relative;
 }
@@ -36,12 +36,12 @@ margin-left:5px;
 
 .container{
 width:90%;
-max-width:1000px;
+max-width:800px;
 margin:auto;
-margin-top:30px;
+margin-top:40px;
 }
 
-.category{
+.post{
 background:white;
 padding:25px;
 margin-bottom:20px;
@@ -49,23 +49,27 @@ border-radius:10px;
 box-shadow:0 3px 8px rgba(0,0,0,0.1);
 }
 
-.category h2{
+.post h2{
 margin-top:0;
 color:#1e7f5c;
 }
 
-.button{
-display:inline-block;
-padding:10px 20px;
-background:#1e7f5c;
-color:white;
-text-decoration:none;
-border-radius:5px;
-margin-top:10px;
+.meta{
+font-size:14px;
+color:#777;
+margin-bottom:12px;
 }
 
-.button:hover{
-background:#155a41;
+.read{
+display:inline-block;
+margin-top:10px;
+text-decoration:none;
+color:#1e7f5c;
+font-weight:bold;
+}
+
+.read:hover{
+text-decoration:underline;
 }
 
 .ar{
@@ -103,11 +107,11 @@ ar.forEach(el=>el.style.display="block");
 
 <header>
 
-<h1 class="en">Blog</h1>
-<h1 class="ar">المدونة</h1>
+<h1 class="en">Belal Blogs</h1>
+<h1 class="ar">بلال يُدَوِن</h1>
 
-<p class="en">Food Safety & Quality Articles</p>
-<p class="ar">مقالات في سلامة الغذاء والجودة</p>
+<p class="en">Insights on Food Safety & Quality</p>
+<p class="ar">أفكار ورؤى حول سلامة الغذاء والجودة</p>
 
 <div class="lang">
 <button onclick="setLanguage('en')">EN</button>
@@ -118,68 +122,74 @@ ar.forEach(el=>el.style.display="block");
 
 <div class="container">
 
-<div class="category">
+<div class="post">
 
-<h2 class="en">Food Safety Basics</h2>
-<h2 class="ar">أساسيات سلامة الغذاء</h2>
+<h2 class="en">What Inspectors Look for During a Food Safety Audit</h2>
+<h2 class="ar">ما الذي يبحث عنه المفتشون أثناء التفتيش الغذائي؟</h2>
 
-<p class="en">Articles about food safety fundamentals.</p>
-<p class="ar">مقالات حول المفاهيم الأساسية لسلامة الغذاء.</p>
+<div class="meta en">March 2026 · 3 min read</div>
+<div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
 
-<a class="button en" href="food-safety-basics.html">Explore</a>
-<a class="button ar" href="food-safety-basics.html">استكشاف</a>
+<p class="en">
+Many facilities fail food safety inspections not because they lack systems,
+but because they don't understand what inspectors are actually assessing.
+</p>
 
-</div>
+<p class="ar">
+تفشل العديد من المنشآت في اجتياز التفتيش الغذائي ليس بسبب غياب الأنظمة،
+بل بسبب عدم فهم ما الذي يبحث عنه المفتشون بالفعل.
+</p>
 
-<div class="category">
-
-<h2 class="en">Food Safety Systems</h2>
-<h2 class="ar">أنظمة سلامة الغذاء</h2>
-
-<p class="en">HACCP, ISO 22000 and food safety management systems.</p>
-<p class="ar">نظام الهاسب و ISO 22000 وأنظمة إدارة سلامة الغذاء.</p>
-
-<a class="button en" href="food-safety-systems.html">Explore</a>
-<a class="button ar" href="food-safety-systems.html">استكشاف</a>
+<a class="read en" href="inspection-article.html">Read more →</a>
+<a class="read ar" href="inspection-article.html">اقرأ المزيد →</a>
 
 </div>
 
-<div class="category">
 
-<h2 class="en">Food Facility Design</h2>
-<h2 class="ar">تصميم المنشآت الغذائية</h2>
+<div class="post">
 
-<p class="en">Design of food factories, kitchens and processing areas.</p>
-<p class="ar">تصميم مصانع الغذاء والمطابخ ومناطق المعالجة.</p>
+<h2 class="en">Why Pest Control Is Critical in Food Facilities</h2>
+<h2 class="ar">لماذا تعتبر مكافحة الآفات أمراً أساسياً في المنشآت الغذائية؟</h2>
 
-<a class="button en" href="facility-design.html">Explore</a>
-<a class="button ar" href="facility-design.html">استكشاف</a>
+<div class="meta en">February 2026 · 2 min read</div>
+<div class="meta ar">فبراير 2026 · دقيقتان قراءة</div>
 
-</div>
+<p class="en">
+Pest control is not just about eliminating insects or rodents.
+It is about protecting food safety and maintaining regulatory compliance.
+</p>
 
-<div class="category">
+<p class="ar">
+مكافحة الآفات ليست مجرد القضاء على الحشرات أو القوارض،
+بل هي جزء أساسي من حماية سلامة الغذاء والامتثال للمتطلبات.
+</p>
 
-<h2 class="en">Pest Control</h2>
-<h2 class="ar">مكافحة الآفات</h2>
-
-<p class="en">Pest management in food facilities.</p>
-<p class="ar">إدارة ومكافحة الآفات في المنشآت الغذائية.</p>
-
-<a class="button en" href="pest-control.html">Explore</a>
-<a class="button ar" href="pest-control.html">استكشاف</a>
+<a class="read en" href="pest-article.html">Read more →</a>
+<a class="read ar" href="pest-article.html">اقرأ المزيد →</a>
 
 </div>
 
-<div class="category">
 
-<h2 class="en">Career Development</h2>
-<h2 class="ar">التطوير المهني</h2>
+<div class="post">
 
-<p class="en">Career tips for food safety professionals.</p>
-<p class="ar">نصائح مهنية لمتخصصي سلامة الغذاء.</p>
+<h2 class="en">How Food Safety Professionals Can Advance Their Careers</h2>
+<h2 class="ar">كيف يطور متخصصو سلامة الغذاء مسارهم المهني؟</h2>
 
-<a class="button en" href="career.html">Explore</a>
-<a class="button ar" href="career.html">استكشاف</a>
+<div class="meta en">January 2026 · 4 min read</div>
+<div class="meta ar">يناير 2026 · 4 دقائق قراءة</div>
+
+<p class="en">
+Technical knowledge alone is not enough to grow in the food safety field.
+Professionals also need strategy, positioning, and visibility.
+</p>
+
+<p class="ar">
+المعرفة الفنية وحدها لا تكفي للتقدم في مجال سلامة الغذاء،
+بل يحتاج المتخصص أيضاً إلى استراتيجية واضحة وبناء حضور مهني قوي.
+</p>
+
+<a class="read en" href="career-article.html">Read more →</a>
+<a class="read ar" href="career-article.html">اقرأ المزيد →</a>
 
 </div>
 
