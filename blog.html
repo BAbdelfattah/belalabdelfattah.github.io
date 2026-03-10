@@ -7,89 +7,106 @@
 <style>
 
 body{
-font-family: Arial;
-background:#f5f5f5;
-margin:0;
+  font-family: Arial;
+  background:#f5f5f5;
+  margin:0;
 }
 
 header{
-background:#1e7f5c;
-color:white;
-padding:25px;
-text-align:center;
-position:relative;
+  background:#1e7f5c;
+  color:white;
+  padding:25px;
+  text-align:center;
+  position:relative;
 }
 
 .lang{
-position:absolute;
-right:20px;
-top:20px;
+  position:absolute;
+  right:20px;
+  top:20px;
 }
 
 .lang button{
-padding:6px 12px;
-border:none;
-border-radius:4px;
-cursor:pointer;
-margin-left:5px;
+  padding:6px 12px;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+  margin-left:5px;
 }
 
 .container{
-width:90%;
-max-width:800px;
-margin:auto;
-margin-top:40px;
+  width:90%;
+  max-width:850px;
+  margin:auto;
+  margin-top:40px;
 }
 
 .filters{
-text-align:center;
-margin-bottom:30px;
+  text-align:center;
+  margin-bottom:30px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
 }
 
 .filters button{
-padding:8px 16px;
-margin:5px;
-border:none;
-border-radius:6px;
-background:#ddd;
-cursor:pointer;
-font-weight:bold;
+  padding:8px 14px;
+  border:none;
+  border-radius:6px;
+  background:#ddd;
+  cursor:pointer;
+  font-weight:bold;
 }
 
 .filters button:hover{
-background:#1e7f5c;
-color:white;
+  background:#1e7f5c;
+  color:white;
 }
 
 .post{
-background:white;
-padding:25px;
-margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 3px 8px rgba(0,0,0,0.1);
+  background:white;
+  padding:25px;
+  margin-bottom:20px;
+  border-radius:10px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.1);
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .post h2{
-margin-top:0;
-color:#1e7f5c;
+  margin:0;
+  color:#1e7f5c;
+}
+
+.meta{
+  font-size:14px;
+  color:#777;
+  margin:5px 0 10px 0;
 }
 
 .read{
-display:inline-block;
-margin-top:10px;
-text-decoration:none;
-color:#1e7f5c;
-font-weight:bold;
+  display:inline-block;
+  margin-top:5px;
+  text-decoration:none;
+  color:#1e7f5c;
+  font-weight:bold;
 }
 
 .read:hover{
-text-decoration:underline;
+  text-decoration:underline;
 }
 
 .ar{
-display:none;
-direction:rtl;
-text-align:right;
+  display:none;
+  direction:rtl;
+  text-align:right;
+}
+
+.article-info{
+  display:flex;
+  flex-direction: column; /* عمودي */
 }
 
 </style>
@@ -97,40 +114,33 @@ text-align:right;
 <script>
 
 function setLanguage(lang){
+  let en=document.querySelectorAll(".en");
+  let ar=document.querySelectorAll(".ar");
 
-let en=document.querySelectorAll(".en");
-let ar=document.querySelectorAll(".ar");
+  if(lang=="en"){
+    en.forEach(el=>el.style.display="block");
+    ar.forEach(el=>el.style.display="none");
+  }
 
-if(lang=="en"){
-en.forEach(el=>el.style.display="inline");
-ar.forEach(el=>el.style.display="none");
-}
-
-if(lang=="ar"){
-en.forEach(el=>el.style.display="none");
-ar.forEach(el=>el.style.display="inline");
-}
-
+  if(lang=="ar"){
+    en.forEach(el=>el.style.display="none");
+    ar.forEach(el=>el.style.display="block");
+  }
 }
 
 function filterPosts(category){
-
-let posts=document.querySelectorAll(".post");
-
-posts.forEach(post=>{
-
-if(category=="all"){
-post.style.display="block";
-}
-else if(post.classList.contains(category)){
-post.style.display="block";
-}
-else{
-post.style.display="none";
-}
-
-});
-
+  let posts=document.querySelectorAll(".post");
+  posts.forEach(post=>{
+    if(category=="all"){
+      post.style.display="flex";
+    }
+    else if(post.classList.contains(category)){
+      post.style.display="flex";
+    }
+    else{
+      post.style.display="none";
+    }
+  });
 }
 
 </script>
@@ -140,102 +150,65 @@ post.style.display="none";
 <body>
 
 <header>
+  <h1 class="en">Belal Blogs</h1>
+  <h1 class="ar">بلال يُدَوِن</h1>
 
-<h1 class="en">Belal Blogs</h1>
-<h1 class="ar">بلال يُدَوِن</h1>
+  <p class="en">Food Safety & Quality Insights</p>
+  <p class="ar">مقالات حول سلامة الغذاء والجودة</p>
 
-<p class="en">Insights on Food Safety & Quality</p>
-<p class="ar">أفكار ورؤى حول سلامة الغذاء والجودة</p>
-
-<div class="lang">
-<button onclick="setLanguage('en')">EN</button>
-<button onclick="setLanguage('ar')">AR</button>
-</div>
-
+  <div class="lang">
+    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('ar')">AR</button>
+  </div>
 </header>
 
 <div class="container">
 
 <div class="filters">
+  <!-- English -->
+  <button class="en" onclick="filterPosts('all')">All</button>
+  <button class="en" onclick="filterPosts('basics')">Basics</button>
+  <button class="en" onclick="filterPosts('haccp')">HACCP</button>
+  <button class="en" onclick="filterPosts('hygiene')">Hygiene</button>
+  <button class="en" onclick="filterPosts('storage')">Storage</button>
 
-<button class="en" onclick="filterPosts('all')">All</button>
-<button class="ar" onclick="filterPosts('all')">الكل</button>
-
-<button class="en" onclick="filterPosts('foodsafety')">Food Safety</button>
-<button class="ar" onclick="filterPosts('foodsafety')">سلامة الغذاء</button>
-
-<button class="en" onclick="filterPosts('pest')">Pest Control</button>
-<button class="ar" onclick="filterPosts('pest')">مكافحة الآفات</button>
-
-<button class="en" onclick="filterPosts('career')">Career</button>
-<button class="ar" onclick="filterPosts('career')">المسار المهني</button>
-
+  <!-- Arabic -->
+  <button class="ar" onclick="filterPosts('all')">الكل</button>
+  <button class="ar" onclick="filterPosts('basics')">الأساسيات</button>
+  <button class="ar" onclick="filterPosts('haccp')">الهاسب</button>
+  <button class="ar" onclick="filterPosts('hygiene')">النظافة</button>
+  <button class="ar" onclick="filterPosts('storage')">التخزين</button>
 </div>
 
-
-<div class="post foodsafety">
-
-<h2 class="en">What Inspectors Look for During a Food Safety Audit</h2>
-<h2 class="ar">ما الذي يبحث عنه المفتشون أثناء التفتيش الغذائي؟</h2>
-
-<p class="en">
-Many facilities fail food safety inspections not because they lack systems,
-but because they don't understand what inspectors are actually assessing.
-</p>
-
-<p class="ar">
-تفشل العديد من المنشآت في اجتياز التفتيش الغذائي ليس بسبب غياب الأنظمة،
-بل بسبب عدم فهم ما الذي يبحث عنه المفتشون بالفعل.
-</p>
-
-<a class="read en" href="inspection-article.html">Read more →</a>
-<a class="read ar" href="inspection-article.html">اقرأ المزيد →</a>
-
+<!-- Articles -->
+<div class="post basics">
+  <div class="article-info">
+    <h2 class="en">What is Food Safety?</h2>
+    <h2 class="ar">ما هي سلامة الغذاء؟</h2>
+    <div class="meta en">March 2026 · 3 min read</div>
+    <div class="meta ar">مارس 2026 · 3 دقائق قراءة</div>
+    <p class="en">Food safety refers to practices that prevent contamination and ensure food is safe for consumption.</p>
+    <p class="ar">تشير سلامة الغذاء إلى الممارسات التي تمنع تلوث الطعام وتضمن سلامته للاستهلاك.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
 </div>
 
-
-<div class="post pest">
-
-<h2 class="en">Why Pest Control Is Critical in Food Facilities</h2>
-<h2 class="ar">لماذا تعتبر مكافحة الآفات أمراً أساسياً في المنشآت الغذائية؟</h2>
-
-<p class="en">
-Pest control is not just about eliminating insects or rodents.
-It is about protecting food safety and maintaining regulatory compliance.
-</p>
-
-<p class="ar">
-مكافحة الآفات ليست مجرد القضاء على الحشرات أو القوارض،
-بل هي جزء أساسي من حماية سلامة الغذاء والامتثال للمتطلبات.
-</p>
-
-<a class="read en" href="pest-article.html">Read more →</a>
-<a class="read ar" href="pest-article.html">اقرأ المزيد →</a>
-
+<div class="post basics">
+  <div class="article-info">
+    <h2 class="en">What is Food Poisoning?</h2>
+    <h2 class="ar">ما هو التسمم الغذائي؟</h2>
+    <div class="meta en">March 2026 · 4 min read</div>
+    <div class="meta ar">مارس 2026 · 4 دقائق قراءة</div>
+    <p class="en">Food poisoning occurs when contaminated food is consumed.</p>
+    <p class="ar">يحدث التسمم الغذائي عند تناول طعام ملوث.</p>
+    <a class="read en" href="#">Read more →</a>
+    <a class="read ar" href="#">اقرأ المزيد →</a>
+  </div>
 </div>
 
-
-<div class="post career">
-
-<h2 class="en">How Food Safety Professionals Can Advance Their Careers</h2>
-<h2 class="ar">كيف يطور متخصصو سلامة الغذاء مسارهم المهني؟</h2>
-
-<p class="en">
-Technical knowledge alone is not enough to grow in the food safety field.
-Professionals also need strategy, positioning, and visibility.
-</p>
-
-<p class="ar">
-المعرفة الفنية وحدها لا تكفي للتقدم في مجال سلامة الغذاء،
-بل يحتاج المتخصص أيضاً إلى استراتيجية واضحة وبناء حضور مهني قوي.
-</p>
-
-<a class="read en" href="career-article.html">Read more →</a>
-<a class="read ar" href="career-article.html">اقرأ المزيد →</a>
+<!-- يمكن تكرار نفس البلوك لبقية المقالات -->
 
 </div>
-
-</div>
-
 </body>
 </html>
