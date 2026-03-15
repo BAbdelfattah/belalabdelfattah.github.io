@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Stories from the Field | Belal Abdelfattah</title>
+<meta name="description" content="Experience-based food safety and quality articles. Real-world stories from the field in food operations.">
+<meta name="robots" content="index, follow">
+<meta name="language" content="en">
+<meta name="geo.region" content="EG">
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  color:#222;
+  line-height:1.6;
+  background:#fefefe;
+}
+h1,h2,h3{margin-bottom:10px;}
+section{padding:60px 20px;}
+.container{max-width:1000px;margin:auto;}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:20px 30px;background:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
+.logo{font-weight:700;font-size:16px;}
+.nav-links a{margin-left:20px;text-decoration:none;color:#333;font-weight:500;font-size:13px;transition:0.3s;}
+.nav-links a:hover{color:#16a34a;}
+.lang-switch{display:flex;align-items:center;background:#f0f0f0;border-radius:20px;padding:3px;cursor:pointer;user-select:none;width:90px;justify-content:space-between;font-weight:600;font-size:14px;position:relative;}
+.lang-switch span{width:45px;text-align:center;z-index:2;transition:color 0.3s;}
+.lang-switch .slider{position:absolute;top:2px;left:2px;width:42px;height:26px;background:#16a34a;border-radius:20px;transition:all 0.3s;}
+.hero{background:linear-gradient(135deg,#ecfdf5,#bbf7d0);text-align:center;padding:80px 20px;}
+.hero h1{font-size:38px;}
+.hero p{max-width:650px;margin:auto;margin-top:15px;color:#444;font-size:17px;}
+.article-list{display:grid;gap:25px;margin-top:40px;}
+.article-card{padding:25px;background:white;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.05);transition:0.3s;}
+.article-card:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,0.1);}
+.article-card h3{margin-bottom:12px;color:#16a34a;}
+.article-card p{color:#555;font-size:16px;}
+.footer{text-align:center;padding:25px;background:#111;color:#bbb;font-size:14px;margin-top:50px;}
+body.arabic{direction:rtl;font-family:'Cairo', sans-serif;}
+body.arabic .nav-links{flex-direction:row;}
+@media(max-width:768px){
+.hero h1{font-size:30px;}
+.nav-links{display:none;}
+}
+</style>
+</head>
+<body class="english">
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">Belal Abdelfattah</div>
+  <div class="nav-links">
+    <a href="about.html" class="en">About</a>
+    <a href="field-guide.html" class="en">Field Guide</a>
+    <a href="from-the-field.html" class="en">Blog (From the Field)</a>
+    <a href="food-safety-basics.html" class="en">Food Safety Basics</a>
+    <a href="#contact" class="en">Contact</a>
+
+    <a href="about.html" class="ar" style="display:none;">عنّي</a>
+    <a href="field-guide.html" class="ar" style="display:none;">دليل المجال</a>
+    <a href="from-the-field.html" class="ar" style="display:none;">المدونة (قصص من الواقع)</a>
+    <a href="food-safety-basics.html" class="ar" style="display:none;">أساسيات سلامة الغذاء</a>
+    <a href="#contact" class="ar" style="display:none;">اتصل</a>
+  </div>
+
+  <div class="lang-switch" onclick="toggleLang()">
+    <span>EN</span>
+    <span>ع</span>
+    <div class="slider"></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<h1 class="en">Stories from the Field</h1>
+<h1 class="ar" style="display:none;">قصص من الواقع</h1>
+<p class="en">Experience-based food safety and quality articles. Learn from real operational challenges and practical solutions.</p>
+<p class="ar" style="display:none;">مقالات مستندة إلى الخبرة العملية في سلامة وجودة الغذاء. تعلم من التحديات الواقعية والحلول العملية.</p>
+</section>
+
+<!-- ARTICLES LIST -->
+<section>
+<div class="container article-list">
+<div class="article-card">
+<h3 class="en">The Damaged Cans Dilemma</h3>
+<h3 class="ar" style="display:none;">مأزق العلب التالفة</h3>
+<p class="en">A real-world case of handling defective canned products in a busy food operation.</p>
+<p class="ar" style="display:none;">قصة عملية حول التعامل مع العلب التالفة في عملية غذائية مزدحمة.</p>
+</div>
+
+<div class="article-card">
+<h3 class="en">Fruits & Veg: Handling Hazards</h3>
+<h3 class="ar" style="display:none;">الفواكه والخضروات: التعامل مع المخاطر</h3>
+<p class="en">Managing risks of fresh produce from the supply chain to the consumer.</p>
+<p class="ar" style="display:none;">إدارة مخاطر المنتجات الطازجة من سلسلة الإمداد إلى المستهلك.</p>
+</div>
+
+<div class="article-card">
+<h3 class="en">Meet the G?P Family</h3>
+<h3 class="ar" style="display:none;">تعرف على عائلة G?P</h3>
+<p class="en">Understanding different food safety standards: GMP, GHP, GLP, GAP, GDP, GVP, GSP, GTP.</p>
+<p class="ar" style="display:none;">فهم المعايير المختلفة لسلامة الغذاء: GMP, GHP, GLP, GAP, GDP, GVP, GSP, GTP.</p>
+</div>
+
+<div class="article-card">
+<h3 class="en">When the Line Stops, Panic Ensues</h3>
+<h3 class="ar" style="display:none;">عندما يتوقف الخط… يسود الذعر</h3>
+<p class="en">Insights from operational challenges when production lines unexpectedly halt.</p>
+<p class="ar" style="display:none;">رؤية من التحديات التشغيلية عندما تتوقف خطوط الإنتاج فجأة.</p>
+</div>
+
+<div class="article-card">
+<h3 class="en">When Audits Get Personal</h3>
+<h3 class="ar" style="display:none;">عندما تصبح التدقيقات شخصية</h3>
+<p class="en">A food safety audit story emphasizing objectivity over experience.</p>
+<p class="ar" style="display:none;">قصة تدقيق سلامة الغذاء تؤكد على الموضوعية أكثر من الخبرة.</p>
+</div>
+
+<div class="article-card">
+<h3 class="en">Peak of the Process: Where’s Quality?</h3>
+<h3 class="ar" style="display:none;">ذروة العملية: أين الجودة؟</h3>
+<p class="en">Analyzing quality checkpoints and oversight in critical operational stages.</p>
+<p class="ar" style="display:none;">تحليل نقاط مراقبة الجودة والإشراف في مراحل التشغيل الحرجة.</p>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Belal Abdelfattah | Food Safety Coach
+</div>
+
+<script>
+function toggleLang(){
+  const body=document.body;
+  body.classList.toggle('arabic');
+  body.classList.toggle('english');
+
+  const enLinks=document.querySelectorAll('.nav-links .en');
+  const arLinks=document.querySelectorAll('.nav-links .ar');
+  if(body.classList.contains('arabic')){
+    enLinks.forEach(a=>a.style.display='none');
+    arLinks.forEach(a=>a.style.display='inline-block');
+  } else {
+    enLinks.forEach(a=>a.style.display='inline-block');
+    arLinks.forEach(a=>a.style.display='none');
+  }
+
+  const allEn=document.querySelectorAll('.en');
+  const allAr=document.querySelectorAll('.ar');
+  allEn.forEach(el=>el.style.display=body.classList.contains('arabic')?'none':'block');
+  allAr.forEach(el=>el.style.display=body.classList.contains('arabic')?'block':'none');
+
+  const slider=document.querySelector('.slider');
+  slider.style.left=body.classList.contains('arabic')?'45px':'2px';
+}
+</script>
+
+</body>
+</html>
