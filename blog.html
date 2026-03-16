@@ -1,0 +1,441 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Belal Abdelfattah | Food Safety Blog</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+body{
+font-family:"Segoe UI", Arial, sans-serif;
+margin:0;
+background:#f1f5f9;
+color:#1e293b;
+line-height:1.7;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 40px;
+background:white;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+color:#16a34a;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#334155;
+font-weight:500;
+}
+
+nav a:hover{
+color:#16a34a;
+}
+
+/* ===== HEADER ===== */
+
+.header{
+text-align:center;
+margin-bottom:40px;
+}
+
+.header h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.header p{
+color:#64748b;
+}
+
+/* ===== SEARCH ===== */
+
+.search{
+text-align:center;
+margin-bottom:40px;
+}
+
+.search input{
+padding:12px 18px;
+width:320px;
+border-radius:8px;
+border:1px solid #cbd5e1;
+font-size:14px;
+}
+
+/* ===== BLOG GRID ===== */
+
+.blog-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+/* ===== ARTICLE CARD ===== */
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.06);
+cursor:pointer;
+transition:0.25s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-body{
+padding:22px;
+}
+
+.card-title{
+font-size:20px;
+font-weight:600;
+color:#16a34a;
+margin-bottom:8px;
+}
+
+.card-meta{
+font-size:13px;
+color:#64748b;
+}
+
+/* ===== ARTICLE ===== */
+
+.article{
+display:none;
+background:white;
+padding:40px;
+border-radius:12px;
+margin-top:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.article h3{
+color:#16a34a;
+margin-top:30px;
+}
+
+.article img{
+width:100%;
+border-radius:10px;
+margin:25px 0;
+}
+
+/* ===== BACK BUTTON ===== */
+
+.back{
+color:#16a34a;
+text-decoration:none;
+font-weight:600;
+}
+
+/* ===== SHARE ===== */
+
+.share{
+margin-top:40px;
+border-top:1px solid #eee;
+padding-top:20px;
+}
+
+.share a{
+margin-right:15px;
+color:#16a34a;
+text-decoration:none;
+}
+
+/* ===== RELATED ===== */
+
+.related{
+margin-top:40px;
+}
+
+.related a{
+display:block;
+margin:8px 0;
+color:#16a34a;
+text-decoration:none;
+}
+
+.related a:hover{
+text-decoration:underline;
+}
+
+/* ===== AUTHOR BOX ===== */
+
+.author{
+margin-top:50px;
+padding:25px;
+background:#f8fafc;
+border-radius:10px;
+border-left:4px solid #16a34a;
+}
+
+.author strong{
+display:block;
+font-size:18px;
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+text-align:center;
+background:#0f172a;
+color:white;
+padding:40px 20px;
+margin-top:60px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:700px){
+
+.navbar{
+padding:15px 20px;
+}
+
+.header h1{
+font-size:28px;
+}
+
+.search input{
+width:90%;
+}
+
+.article{
+padding:25px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- ===== NAVBAR ===== -->
+
+<header class="navbar">
+
+<div class="logo">Belal Abdelfattah</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="#">About</a>
+<a href="#">Field Guide</a>
+<a href="blog.html">Blog</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+
+
+<div class="container">
+
+
+<!-- ===== HEADER ===== -->
+
+<div class="header">
+
+<h1>Food Safety from the Field</h1>
+
+<p>Real experiences, practical decisions, and lessons from the industry</p>
+
+</div>
+
+
+
+<!-- ===== SEARCH ===== -->
+
+<div class="search">
+
+<input type="text" placeholder="Search articles...">
+
+</div>
+
+
+
+<!-- ===== BLOG GRID ===== -->
+
+<div class="blog-grid">
+
+
+<!-- ARTICLE CARD -->
+
+<div class="card" onclick="openArticle('cans')">
+
+<img src="images/cans-in-warehouse.webp" alt="Damaged cans warehouse">
+
+<div class="card-body">
+
+<div class="card-title">The Damaged Cans Dilemma</div>
+
+<div class="card-meta">Food Safety Case Study • 5 min read</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ===== FULL ARTICLE ===== -->
+
+<div class="article" id="cans">
+
+<a href="#" class="back" onclick="closeArticle()">← Back to Blog</a>
+
+<h2>The Damaged Cans Dilemma</h2>
+
+<img src="images/cans-in-warehouse.webp" alt="Warehouse canned food inspection">
+
+<p><strong>How should food safety professionals evaluate dented cans, rust, and leakage during warehouse inspections?</strong></p>
+
+<p>This real case explores the practical decisions behind damaged canned products.</p>
+
+<h3>The First Signs</h3>
+
+<ul>
+<li>Dented cans</li>
+<li>Light rust</li>
+<li>Wet cartons</li>
+</ul>
+
+<h3>Why It Matters</h3>
+
+<p>Metal cans protect food through a hermetic seal that prevents contamination from air, moisture, and microorganisms.</p>
+
+<p>Mechanical damage may compromise this protection.</p>
+
+<h3>The Decision</h3>
+
+<ul>
+<li>Reject leaking cans</li>
+<li>Segregate damaged cartons</li>
+<li>Accept minor dents away from seams</li>
+</ul>
+
+
+<!-- SHARE -->
+
+<div class="share">
+
+<strong>Share</strong><br>
+
+<a href="#">LinkedIn</a>
+<a href="#">Twitter</a>
+
+</div>
+
+
+
+<!-- RELATED -->
+
+<div class="related">
+
+<h3>Related Articles</h3>
+
+<a href="#">When the Line Stops: Panic in Production</a>
+
+<a href="#">Food Safety vs Production Pressure</a>
+
+<a href="#">Warehouse Risks in Food Logistics</a>
+
+</div>
+
+
+
+<!-- AUTHOR -->
+
+<div class="author">
+
+<strong>Belal Abdelfattah</strong>
+
+Food Safety & Quality Professional sharing real industry experiences from factories, warehouses, and field operations.
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer class="footer">
+
+<p>© 2026 Belal Abdelfattah</p>
+
+<p>Food Safety • Quality • Industry Knowledge</p>
+
+</footer>
+
+
+
+<script>
+
+/* ===== OPEN ARTICLE ===== */
+
+function openArticle(id){
+
+document.getElementById(id).style.display="block";
+
+window.scrollTo({top:600,behavior:"smooth"});
+
+}
+
+/* ===== CLOSE ARTICLE ===== */
+
+function closeArticle(){
+
+document.querySelector(".article").style.display="none";
+
+window.scrollTo({top:0,behavior:"smooth"});
+
+}
+
+</script>
+
+
+</body>
+</html>
+```
