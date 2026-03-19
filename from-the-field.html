@@ -6,129 +6,41 @@
 <title>Food Safety Blog | Belal Abdelfattah</title>
 <style>
 /* ===== GLOBAL ===== */
-body{
-  font-family:Segoe UI, Arial, sans-serif;
-  margin:0;
-  background:#ffffff;
-  color:#222;
-  line-height:1.7;
-}
-/* ===== NAVBAR ===== */
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 40px;
-  background:white;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-.logo{
-  font-weight:700;
-  color:#16a34a;
-}
-.nav-links a{
-  margin-left:20px;
-  text-decoration:none;
-  color:#334155;
-  font-size:14px;
-}
-.nav-links a:hover{
-  color:#16a34a;
-}
-/* ===== HERO ===== */
-.hero{
-  text-align:center;
-  padding:80px 20px;
-  background:linear-gradient(135deg,#ecfdf5,#bbf7d0);
-}
-.hero h1{
-  font-size:36px;
-  margin-bottom:10px;
-}
-.hero p{
-  color:#475569;
-  font-size:18px;
-}
-/* ===== CONTAINER ===== */
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:40px 20px;
-}
-/* ===== SECTION INTRO ===== */
-.section-intro{
-  text-align:left; /* left aligned */
-  color:#475569;
-  margin-bottom:40px;
-  font-size:16px;
-}
-/* ===== ARTICLE CARDS ===== */
-.article-card{
-  display:flex;
-  gap:15px;
-  align-items:center;
-  background:#f8fafc;
-  padding:15px;
-  border-radius:10px;
-  margin-bottom:15px;
-  cursor:pointer;
-  transition:0.25s;
-}
-.article-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 6px 15px rgba(0,0,0,0.08);
-}
-.article-card img{
-  width:120px;
-  height:80px;
-  object-fit:cover;
-  border-radius:8px;
-}
-.card-text h3{
-  margin:0;
-  color:#16a34a;
-}
-.card-text p{
-  margin:5px 0 0;
-  font-size:14px;
-  color:#555;
-}
-/* ===== ARTICLE CONTENT ===== */
-.article-content{
-  display:none;
-  padding:25px;
-  margin:20px 0 40px;
-  border-left:4px solid #16a34a;
-  background:#f8fafc;
-  border-radius:8px;
-}
-.article-content img{
-  width:100%;
-  margin:20px 0;
-  border-radius:8px;
-}
-ul{
-  margin-left:20px;
-}
-hr{
-  margin:30px 0;
-  border:none;
-  border-top:1px solid #ddd;
-}
-/* ===== FOOTER ===== */
-.footer{
-  text-align:center;
-  padding:30px;
-  background:#0f172a;
-  color:white;
-  margin-top:40px;
-}
+body{font-family:Segoe UI, Arial, sans-serif;margin:0;background:#ffffff;color:#222;line-height:1.7;}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:white;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:100;}
+.logo{font-weight:700;color:#16a34a;}
+.nav-links a{margin-left:20px;text-decoration:none;color:#334155;font-size:14px;}
+.nav-links a:hover{color:#16a34a;}
+.hero{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#ecfdf5,#bbf7d0);}
+.hero h1{font-size:36px;margin-bottom:10px;}
+.hero p{color:#475569;font-size:18px;}
+.container{max-width:900px;margin:auto;padding:40px 20px;}
+.section-intro{text-align:left;color:#475569;margin-bottom:40px;font-size:16px;}
+.article-card{display:flex;gap:15px;align-items:center;background:#f8fafc;padding:15px;border-radius:10px;margin-bottom:15px;cursor:pointer;transition:0.25s;}
+.article-card:hover{transform:translateY(-3px);box-shadow:0 6px 15px rgba(0,0,0,0.08);}
+.article-card img{width:120px;height:80px;object-fit:cover;border-radius:8px;}
+.card-text h3{margin:0;color:#16a34a;}
+.card-text p{margin:5px 0 0;font-size:14px;color:#555;}
+.article-content{display:none;padding:25px;margin:20px 0 40px;border-left:4px solid #16a34a;background:#f8fafc;border-radius:8px;}
+.article-content img{width:100%;margin:20px 0;border-radius:8px;}
+ul{margin-left:20px;}
+hr{margin:30px 0;border:none;border-top:1px solid #ddd;}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:20px;}
+.references, .author-signature, .article-cta, .share-buttons{margin-top:30px;}
+.references h4{margin-bottom:10px;color:#16a34a;}
+.references ul{list-style:disc;}
+.references a{color:#16a34a;text-decoration:none;}
+.references a:hover{text-decoration:underline;}
+.author-signature{display:flex;align-items:center;gap:15px;margin-top:20px;}
+.author-img{width:60px;height:60px;border-radius:50%;object-fit:cover;}
+.article-cta .cta-btn{display:inline-block;margin-right:15px;margin-top:10px;padding:10px 18px;background:#16a34a;color:white;text-decoration:none;border-radius:5px;font-weight:600;transition:0.2s;}
+.article-cta .cta-btn:hover{background:#138c3f;}
+.share-buttons span{font-weight:600;margin-right:10px;}
+.share-buttons a{display:inline-block;margin-right:10px;text-decoration:none;padding:5px 10px;background:#e2e8f0;border-radius:5px;transition:0.2s;font-size:14px;color:#334155;}
+.share-buttons a:hover{background:#16a34a;color:white;}
+.footer{text-align:center;padding:30px;background:#0f172a;color:white;margin-top:40px;}
 </style>
 </head>
-
 <body>
 
 <!-- NAVBAR -->
@@ -155,9 +67,8 @@ hr{
 <p class="section-intro">See what happens in real operations.</p>
 
 <!-- ================= CARDS ================= -->
-
 <div class="article-card" onclick="toggleArticle('damagedCans')">
-  <img src="images/cans-in-warehouse.webp">
+  <img src="images/cans-in-warehouse.webp" alt="Damaged Cans">
   <div class="card-text">
     <h3>▶ The Damaged Cans Dilemma</h3>
     <p>Handling dented cans, leakage, and warehouse risks</p>
@@ -165,7 +76,7 @@ hr{
 </div>
 
 <div class="article-card" onclick="toggleArticle('fruitsVeg')">
-  <img src="images/fruits-vegetables.webp">
+  <img src="images/fruits-vegetables.webp" alt="Fruits & Vegetables">
   <div class="card-text">
     <h3>▶ Fruits & Vegetables: Handling Hazards</h3>
     <p>Managing fresh produce risks from inside the supply chain</p>
@@ -173,7 +84,7 @@ hr{
 </div>
 
 <div class="article-card" onclick="toggleArticle('lineStops')">
-  <img src="images/production-line.webp">
+  <img src="images/production-line.webp" alt="Production Line">
   <div class="card-text">
     <h3>▶ When the Line Stops, Panic Ensues</h3>
     <p>Balancing production pressure and food safety decisions</p>
@@ -182,11 +93,19 @@ hr{
 
 <!-- ================= ARTICLES ================= -->
 
+<!-- Damaged Cans -->
 <div class="article-content" id="damagedCans">
 <h2>The Damaged Cans Dilemma: A Real Food Safety Case from the Field</h2>
-<img src="images/cans-in-warehouse.webp" alt="Cans in warehouse">
-<p><strong>How should food safety professionals evaluate dented cans, rust, and leakage in real warehouse operations?</strong></p>
+<div class="article-meta">Updated: March 19, 2026 | Reading time: 8 min</div>
+<p><strong>How should food safety professionals evaluate dented cans, rust, and leakage in real warehouse operations? This case study explores a real-life decision involving damaged canned food, risk assessment, and practical quality management.</strong></p>
 <p>In food safety, some situations look small at first… but the decision behind them is anything but simple. Issues like dented cans, rusted cans, or leaking canned food are common in warehouses and distribution centers. However, the decision to accept or reject a shipment is rarely straightforward.</p>
+<p>I remember a situation when we were managing a temporarily rented warehouse used to store food products before distribution. It was not a permanent facility, just a logistical solution at the time. Inside the warehouse we had several canned products:</p>
+<ul>
+<li>Tomato sauce</li>
+<li>Fava beans</li>
+<li>Tuna</li>
+</ul>
+<p>At the same time, another activity was taking place in the warehouse: kitting — assembling several products, including these canned items and other goods, into distribution cartons. This meant that a problem with one product could affect several others. And that’s where the dilemma started.</p>
 
 <h3>The First Signs</h3>
 <ul>
@@ -194,45 +113,108 @@ hr{
 <li>Some cans showed light rust</li>
 <li>A few cartons were wet or stained with sauce</li>
 </ul>
+<p>When we opened several cartons, the situation became clearer. Some cans had leaked tomato sauce, which had spread inside the carton and stained other products stored together. At that moment, the issue was no longer just about a damaged can. The real question became: Is this shipment even suitable for the kitting process?</p>
 
-<h3>Evaluation: Category Approach</h3>
+<h3>Why Damaged Cans Matter in Food Safety</h3>
 <ul>
-<li><strong>Category A – Critical Defects:</strong> Leaking cans, swollen cans, punctures, evidence of spoilage → rejected automatically</li>
-<li><strong>Category B – Major Defects:</strong> Severe dents near seams, advanced rust, deformation → segregated and rejected</li>
-<li><strong>Category C – Minor Defects:</strong> Light scratches, small dents away from seams → may be accepted after proper evaluation</li>
+<li>Air</li>
+<li>Moisture</li>
+<li>Bacteria</li>
+<li>External contamination</li>
+</ul>
+<p>When a can suffers mechanical damage, that protective barrier may be compromised. In low-acid canned foods, there is even a theoretical risk of bacteria such as <em>Clostridium botulinum</em>, which can cause botulism. What makes this organism particularly dangerous is that it can grow without obvious changes in taste or smell. Damaged cans are not merely cosmetic — they can become a food safety risk.</p>
+
+<h3>But Not Every Dented Can Is Dangerous</h3>
+<ul>
+<li>Reject everything</li>
+<li>Or accept everything</li>
+</ul>
+<p>Reality is more nuanced. We evaluated packaging defects based on severity categories to make decisions more objective and risk-based.</p>
+
+<h4>Category A – Critical Defects</h4>
+<ul>
+<li>Leaking cans</li>
+<li>Swollen cans</li>
+<li>Punctures or holes</li>
+<li>Evidence of spoilage</li>
+</ul>
+
+<h4>Category B – Major Defects</h4>
+<ul>
+<li>Severe dents near the seams</li>
+<li>Advanced rust</li>
+<li>Deformation that may affect the seal</li>
+</ul>
+
+<h4>Category C – Minor Defects</h4>
+<ul>
+<li>Light surface scratches</li>
+<li>Small dents away from seams</li>
+<li>Minor surface corrosion</li>
 </ul>
 
 <h3>The Real Problem Was Not the Cans</h3>
-<p>The main issue was logistical handling—pressure during transport, rough handling, and kitting operations caused denting, leakage, and staining.</p>
+<ul>
+<li>Excessive pressure on cartons during transport</li>
+<li>Some cartons falling during handling</li>
+<li>Rough warehouse handling</li>
+</ul>
+<p>These factors caused denting of cans, sauce leakage, and staining of cartons and nearby products.</p>
+
+<h3>Kitting Made the Situation Worse</h3>
+<p>Because the warehouse was performing kitting, the situation became more complicated. Stained cartons were unacceptable for distribution. Appearance, hygiene perception, and operational practicality all mattered.</p>
 
 <h3>The Decision</h3>
 <ul>
 <li>Segregate heavily damaged cartons</li>
-<li>Reject cans with leakage or rust</li>
-<li>Reinspect and clean affected cartons where possible</li>
-<li>Accept only minor dents away from seams</li>
+<li>Reject cans with leakage or clear rust damage</li>
+<li>Reinspect and clean affected cartons</li>
+<li>Accept only cans with minor dents away from seams</li>
 </ul>
 
-<h3>Lesson for Food Safety Professionals</h3>
-<p>Good quality management is about understanding the full picture and making the best professional decision with the information available.</p>
+<h3>The Lesson for Food Safety Professionals</h3>
+<ul>
+<li>What is the level of risk?</li>
+<li>What is the most responsible decision in this context?</li>
+</ul>
+<p>Good quality management means understanding the full picture and making the best professional decision.</p>
+
+<div class="references">
+<h4>References</h4>
+<ul>
+<li><a href="https://www.fda.gov/food/guidance-documents-regulatory-information-topic-food-and-dietary-supplements" target="_blank">FDA Food Guidance</a></li>
+<li><a href="http://www.fao.org/fao-who-codexalimentarius/en/" target="_blank">Codex Alimentarius</a></li>
+<li><a href="https://www.fsis.usda.gov/" target="_blank">USDA FSIS</a></li>
+</ul>
 </div>
 
+<div class="author-signature">
+<img src="images/belal-profile.webp" alt="Belal Abdelfattah" class="author-img">
+<div><p><strong>Belal Abdelfattah</strong><br><small>Food Safety & QA Professional | Field Experience</small></p></div>
+</div>
+
+<div class="article-cta">
+<a href="#contact" class="cta-btn">Book a Session</a>
+<a href="#contact" class="cta-btn">Contact Me</a>
+</div>
+
+<div class="share-buttons">
+<span>Share:</span>
+<a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank">Facebook</a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=YOUR_URL" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Check+this+Food+Safety+Case" target="_blank">Twitter</a>
+<a href="mailto:?subject=Food Safety Case&body=Check out this article: YOUR_URL">Email</a>
+</div>
+</div>
+
+<!-- Fruits & Vegetables -->
 <div class="article-content" id="fruitsVeg">
 <h2>Fruits & Vegetables: Handling Hazards in Real Operations</h2>
-<p><strong>A Practical Food Safety Case from the Field</strong></p>
-<p>How should food safety professionals handle fruits and vegetables when quality problems come from inside the supply chain? This real operational case explores the challenge of receiving deteriorated produce, managing risks, and protecting food safety under operational pressure.</p>
-<p>When people think about food safety risks, they often imagine processing plants, complex machinery, or packaged foods. But some of the most underestimated products in food safety are actually the simplest ones: fresh fruits and vegetables. Unlike packaged food, fresh produce often reaches the consumer with minimal processing, and sometimes it is consumed raw. This means that any deterioration, contamination, or mishandling can directly affect food safety.</p>
-
-<p>I remember a situation when I was working in a company that had a central distribution center responsible for supplying branches with food products, including fresh fruits and vegetables. In theory, the system seemed simple. The central warehouse would send fruits and vegetables to the branches, where they would be used for:</p>
-<ul>
-<li>Product display</li>
-<li>Fresh juices</li>
-<li>Fruit salads</li>
-<li>Kitchen preparation</li>
-</ul>
+<div class="article-meta">Updated: March 19, 2026 | Reading time: 7 min</div>
+<p>A Practical Food Safety Case from the Field</p>
+<p>How should food safety professionals handle fruits and vegetables when quality problems come from inside the supply chain? This case explores deteriorated produce, managing risks, and protecting food safety.</p>
 
 <h3>When Quality Problems Come from Inside the System</h3>
-<p>Over time we started noticing a recurring issue. Some of the fruits and vegetables arriving from the central distribution center were already in poor condition. Typical problems included:</p>
 <ul>
 <li>Overripe fruits</li>
 <li>Soft or bruised vegetables</li>
@@ -241,51 +223,69 @@ hr{
 </ul>
 
 <h3>The Operational Dilemma</h3>
-<p>Rejecting poor-quality produce sounds simple in theory. However, in real operations, the situation can be more complicated. These products were supplied internally by the company’s own distribution system, and rejecting shipments was not always operationally easy. This created a daily dilemma: How do you manage food safety risks when the supply chain itself is not performing properly?</p>
+<p>Rejecting poor-quality produce sounds simple but is operationally difficult when products come from internal distribution systems.</p>
 
 <h3>Why Fruits and Vegetables Can Become a Food Safety Risk</h3>
 <ul>
 <li>Microbial growth</li>
-<li>Cross-contamination with other foods</li>
-<li>Attraction of insects and pests</li>
+<li>Cross-contamination</li>
+<li>Insect and pest attraction</li>
 <li>Rapid spoilage of nearby products</li>
 </ul>
 
-<h3>When Produce Is Used for Multiple Purposes</h3>
+<h3>Managing the Risk</h3>
 <ul>
-<li>Fresh juices</li>
-<li>Fruit salads</li>
-<li>Kitchen ingredients</li>
+<li>Immediate sorting after delivery</li>
+<li>Removing damaged produce</li>
+<li>Separating questionable items</li>
+<li>Monitoring products for juices and salads</li>
 </ul>
 
-<h3>Managing the Risk at the Operational Level</h3>
-<ul>
-<li>Immediate sorting of fruits and vegetables after delivery</li>
-<li>Removing damaged or spoiled produce</li>
-<li>Separating questionable items from kitchen preparation areas</li>
-<li>Monitoring products used for juices and salads carefully</li>
-</ul>
+<h3>The Lesson</h3>
+<p>Food safety is about managing imperfect systems and operational limitations, applying practical controls, and exercising professional judgment.</p>
 
-<h3>The Lesson for Food Safety Professionals</h3>
-<p>Food safety is not only about rules and standards. Sometimes it is about managing imperfect systems and operational limitations. When the supply chain is not ideal, the responsibility of the food safety professional becomes even more critical. Understanding risks, applying practical controls, and maintaining professional judgment are essential parts of real-world food safety.</p>
+<div class="references">
+<h4>References</h4>
+<ul>
+<li><a href="https://www.fda.gov/food/food-safety-modernization-act-fsma" target="_blank">FDA FSMA</a></li>
+<li><a href="https://www.cdc.gov/foodsafety/" target="_blank">CDC Food Safety</a></li>
+</ul>
 </div>
 
+<div class="author-signature">
+<img src="images/belal-profile.webp" alt="Belal Abdelfattah" class="author-img">
+<div><p><strong>Belal Abdelfattah</strong><br><small>Food Safety & QA Professional | Field Experience</small></p></div>
+</div>
+
+<div class="article-cta">
+<a href="#contact" class="cta-btn">Book a Session</a>
+<a href="#contact" class="cta-btn">Contact Me</a>
+</div>
+
+<div class="share-buttons">
+<span>Share:</span>
+<a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank">Facebook</a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=YOUR_URL" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Check+this+Food+Safety+Case" target="_blank">Twitter</a>
+<a href="mailto:?subject=Food Safety Case&body=Check out this article: YOUR_URL">Email</a>
+</div>
+</div>
+
+<!-- When the Line Stops -->
 <div class="article-content" id="lineStops">
 <h2>When the Line Stops, Panic Ensues</h2>
-<p>In one of the factories where I worked, there was one moment that everyone feared more than anything else: the production line stopping.</p>
-<p>The moment the line stopped, the atmosphere on the production floor changed instantly. Supervisors started calling each other. Managers appeared within minutes. Everyone wanted one thing: “Restart the line.” Sometimes the pressure was intense. Questions came quickly, often before anyone had time to properly understand what had happened.</p>
+<div class="article-meta">Updated: March 19, 2026 | Reading time: 6 min</div>
+<p>In one of the factories where I worked, the production line stopping created fear. Managers, supervisors, and staff reacted instantly, and everyone wanted one thing: “Restart the line.”</p>
 
 <h3>The Quality Team’s Position</h3>
-<p>When a serious issue appeared, stopping the line was sometimes the only responsible decision. Problems could involve:</p>
 <ul>
-<li>Packaging integrity</li>
-<li>Product contamination risks</li>
-<li>Equipment malfunction affecting product safety</li>
-<li>Process deviations that could compromise quality</li>
+<li>Stop line for packaging integrity issues</li>
+<li>Prevent contamination risks</li>
+<li>Address equipment malfunctions affecting safety</li>
+<li>Manage process deviations compromising quality</li>
 </ul>
 
 <h3>When the Situation Is Not So Clear</h3>
-<p>Not every line stoppage was truly necessary. Sometimes, colleagues in quality — especially those with less operational experience — would stop the line for issues that could have been handled without a full shutdown. For example:</p>
 <ul>
 <li>Minor packaging adjustments</li>
 <li>Cosmetic defects that did not affect safety</li>
@@ -293,20 +293,44 @@ hr{
 </ul>
 
 <h3>The Real Challenge</h3>
-<p>Over time, I realized that working in quality requires more than technical knowledge. It requires judgment. Stopping a production line is one of the most powerful decisions anyone can make inside a factory. It should never be done lightly. But it should also never be avoided when product safety or process integrity is at risk. Learning when to stop the line — and when to manage the issue without stopping production — is something that only comes with experience and understanding of the full process.</p>
+<p>Working in quality requires judgment. Stopping a line is powerful and must be done carefully — never lightly, but never avoided when safety is at risk.</p>
 
 <h3>The Lesson</h3>
-<p>The goal inside a factory is not to choose between production speed and quality control. Both must exist together. A factory that prioritizes speed over safety will eventually face serious quality failures. And a quality system that stops production unnecessarily will struggle to maintain operational credibility. The real skill lies in finding the balance between:</p>
 <ul>
 <li>Protecting the product</li>
 <li>Maintaining operational stability</li>
 </ul>
-<p>And that balance is one of the most important skills a food safety professional can develop.</p>
+<p>The real skill lies in balancing safety and production efficiency.</p>
+
+<div class="references">
+<h4>References</h4>
+<ul>
+<li><a href="https://www.ifst.org/" target="_blank">Institute of Food Science & Technology</a></li>
+<li><a href="https://www.fda.gov/food" target="_blank">FDA Food Guidance</a></li>
+</ul>
+</div>
+
+<div class="author-signature">
+<img src="images/belal-profile.webp" alt="Belal Abdelfattah" class="author-img">
+<div><p><strong>Belal Abdelfattah</strong><br><small>Food Safety & QA Professional | Field Experience</small></p></div>
+</div>
+
+<div class="article-cta">
+<a href="#contact" class="cta-btn">Book a Session</a>
+<a href="#contact" class="cta-btn">Contact Me</a>
+</div>
+
+<div class="share-buttons">
+<span>Share:</span>
+<a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank">Facebook</a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=YOUR_URL" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Check+this+Food+Safety+Case" target="_blank">Twitter</a>
+<a href="mailto:?subject=Food Safety Case&body=Check out this article: YOUR_URL">Email</a>
+</div>
 </div>
 
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
   © 2026 Belal Abdelfattah
 </div>
@@ -315,16 +339,11 @@ hr{
 let currentOpen = null;
 function toggleArticle(id){
   const el = document.getElementById(id);
-  if(currentOpen === id){
-    el.style.display="none";
-    currentOpen = null;
-    return;
-  }
-  document.querySelectorAll('.article-content')
-  .forEach(a => a.style.display='none');
-  el.style.display = "block";
+  if(currentOpen === id){el.style.display="none";currentOpen=null;return;}
+  document.querySelectorAll('.article-content').forEach(a=>a.style.display='none');
+  el.style.display="block";
   el.scrollIntoView({behavior:'smooth'});
-  currentOpen = id;
+  currentOpen=id;
 }
 </script>
 
