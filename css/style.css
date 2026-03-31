@@ -1,5 +1,4 @@
 /* ===== ROOT VARIABLES ===== */
-
 :root{
   --primary:#16a34a;
   --primary-dark:#15803d;
@@ -11,7 +10,6 @@
 }
 
 /* ===== RESET ===== */
-
 *{
   margin:0;
   padding:0;
@@ -29,10 +27,12 @@ body{
   background:var(--bg);
 }
 
+/* ===== HEADINGS ===== */
 h1,h2,h3{
   margin-bottom:10px;
 }
 
+/* ===== SECTIONS ===== */
 section{
   padding:80px 20px;
 }
@@ -43,7 +43,6 @@ section{
 }
 
 /* ===== REUSABLE COMPONENTS ===== */
-
 .btn{
   padding:14px 26px;
   border:none;
@@ -75,7 +74,6 @@ section{
 }
 
 /* ===== NAVBAR ===== */
-
 .navbar{
   display:flex;
   justify-content:space-between;
@@ -96,6 +94,7 @@ section{
 
 .nav-links{
   display:flex;
+  flex-wrap:wrap;
 }
 
 .nav-links a{
@@ -113,7 +112,6 @@ section{
 }
 
 /* ===== HERO ===== */
-
 .hero{
   text-align:center;
   background:linear-gradient(135deg,#ecfdf5,#bbf7d0);
@@ -134,18 +132,21 @@ section{
 
 .cta-buttons{
   margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
-/* ===== SERVICES ===== */
-
-.services{
+/* ===== SERVICES & CARDS ===== */
+.services, .blog-posts, .basics-content{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
   margin-top:40px;
 }
 
-.service{
+.service, .card, .blog-post, .basic-card{
   padding:25px;
   border-radius:12px;
   border:1px solid #eee;
@@ -154,25 +155,24 @@ section{
   text-align:center;
 }
 
-.service i{
+.service i, .blog-post i, .basic-card i{
   font-size:26px;
   color:var(--primary);
   margin-bottom:10px;
 }
 
-.service:hover{
+.service:hover, .card:hover, .blog-post:hover, .basic-card:hover{
   transform:translateY(-6px);
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* ===== THINKING SECTION ===== */
-
-.thinking{
+/* ===== THINKING / QUOTES ===== */
+.thinking, .quote-section{
   background:var(--bg-light);
   text-align:center;
 }
 
-.quote{
+.quote, .quote-section p{
   max-width:700px;
   margin:25px auto;
   font-style:italic;
@@ -180,7 +180,6 @@ section{
 }
 
 /* ===== TIMELINE ===== */
-
 .timeline-section{
   background:var(--bg);
 }
@@ -247,13 +246,12 @@ section{
   color:#777;
 }
 
-/* ===== WHY SECTION ===== */
-
-.why{
+/* ===== WHY / ABOUT ===== */
+.why, .about-section{
   text-align:center;
 }
 
-.why p{
+.why p, .about-section p{
   max-width:700px;
   margin:auto;
   color:var(--text-light);
@@ -261,14 +259,12 @@ section{
 }
 
 /* ===== CONTACT ===== */
-
 .contact{
   background:var(--bg-light);
   text-align:center;
 }
 
 /* ===== FOOTER ===== */
-
 .footer{
   text-align:center;
   padding:30px;
@@ -278,7 +274,6 @@ section{
 }
 
 /* ===== TABLET ===== */
-
 @media(max-width:992px){
 
   .timeline::before{
@@ -301,10 +296,13 @@ section{
     right:auto;
   }
 
+  .services, .blog-posts, .basics-content{
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  }
+
 }
 
 /* ===== MOBILE ===== */
-
 @media(max-width:768px){
 
   .hero h1{
@@ -317,4 +315,24 @@ section{
     margin-top:10px;
   }
 
+  .services, .blog-posts, .basics-content{
+    grid-template-columns:1fr;
+  }
+
+}
+
+/* ===== SMALL PHONES ===== */
+@media(max-width:480px){
+  body{
+    font-size:15px;
+  }
+
+  .cta-buttons{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .nav-links a{
+    font-size:12px;
+  }
 }
