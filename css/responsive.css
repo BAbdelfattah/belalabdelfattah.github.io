@@ -1,0 +1,184 @@
+/* ==============================
+   Responsive CSS for belalabdelfattah.github.io
+   Mobile-First Approach
+   ============================== */
+
+/* ---------- Base Styles (Mobile) ---------- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #222;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.card {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #f4f4f4;
+}
+
+/* ================== Media Queries ================== */
+
+/* ---------- Tablet: 600px – 1024px ---------- */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+  body {
+    font-size: 17px;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .hero, .section {
+    padding: 3rem 2rem;
+  }
+
+  .card {
+    display: inline-block;
+    width: 48%;
+    margin: 1%;
+  }
+}
+
+/* ---------- Small Desktop: 1025px – 1280px ---------- */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  body {
+    font-size: 18px;
+  }
+
+  header nav ul {
+    justify-content: flex-end;
+  }
+
+  .hero {
+    padding: 4rem 3rem;
+  }
+
+  .section {
+    padding: 3rem 3rem;
+  }
+
+  .card {
+    width: 30%;
+    margin: 1.66%;
+  }
+}
+
+/* ---------- Large Desktop: 1281px and up ---------- */
+@media (min-width: 1281px) {
+
+  body {
+    font-size: 19px;
+  }
+
+  header {
+    padding: 4rem 4rem;
+  }
+
+  .hero {
+    padding: 5rem 4rem;
+  }
+
+  .section {
+    padding: 4rem 4rem;
+  }
+
+  .card {
+    width: 23%;
+    margin: 1%;
+  }
+}
+
+/* ---------- Optional: Small Phones ---------- */
+@media (max-width: 480px) {
+
+  body {
+    font-size: 15px;
+    padding: 0 0.5rem;
+  }
+
+  header nav ul {
+    gap: 0.3rem;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+/* ============ Extra Responsive Touches ============ */
+header nav ul li a:hover {
+  color: #007BFF;
+}
+
+button, .btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover, .btn:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
