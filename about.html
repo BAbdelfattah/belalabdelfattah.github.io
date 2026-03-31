@@ -7,110 +7,108 @@
 
 <style>
 
-/* ===== GLOBAL ===== */
 body{
-font-family:Segoe UI, Arial, sans-serif;
+font-family:Segoe UI, Arial;
 margin:0;
 background:#ffffff;
 color:#222;
 line-height:1.7;
 }
 
+/* NAVBAR */
 .navbar{
 display:flex;
 justify-content:space-between;
-align-items:center;
 padding:18px 40px;
 background:white;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
-z-index:100;
 }
 
-.logo{
-font-weight:700;
-color:#16a34a;
-}
+.logo{color:#16a34a;font-weight:700;}
+.nav-links a{margin-left:20px;text-decoration:none;color:#334155;}
+.nav-links a:hover{color:#16a34a;}
 
-.nav-links a{
-margin-left:20px;
-text-decoration:none;
-color:#334155;
-font-size:14px;
-}
-
-.nav-links a:hover{
-color:#16a34a;
-}
-
+/* HERO */
 .hero{
+padding:100px 20px;
 text-align:center;
-padding:80px 20px;
 background:linear-gradient(135deg,#ecfdf5,#bbf7d0);
 }
 
 .hero h1{
-font-size:36px;
+font-size:42px;
 margin-bottom:10px;
 }
 
 .hero p{
+font-size:20px;
 color:#475569;
-font-size:18px;
 max-width:700px;
 margin:auto;
 }
 
+/* SECTION */
 .container{
 max-width:900px;
 margin:auto;
 padding:40px 20px;
 }
 
-.section{
-background:#f8fafc;
-padding:25px;
-border-radius:10px;
-margin-bottom:20px;
-box-shadow:0 3px 8px rgba(0,0,0,0.05);
+.block{
+margin-bottom:50px;
 }
 
-.section h2{
-margin-top:0;
+.block h2{
 color:#16a34a;
+margin-bottom:15px;
 }
 
-ul{
-margin-left:20px;
+.highlight{
+background:#f0fdf4;
+padding:20px;
+border-left:4px solid #16a34a;
+border-radius:8px;
+margin:20px 0;
 }
 
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.card{
+background:#f8fafc;
+padding:20px;
+border-radius:10px;
+}
+
+/* CTA */
 .cta{
 text-align:center;
-margin-top:40px;
+margin-top:50px;
 }
 
 .cta-btn{
-display:inline-block;
-padding:12px 22px;
+padding:14px 24px;
 background:#16a34a;
 color:white;
 text-decoration:none;
 border-radius:6px;
-font-weight:600;
-transition:0.2s;
+font-weight:bold;
 }
 
-.cta-btn:hover{
-background:#138c3f;
-}
+.cta-btn:hover{background:#138c3f;}
 
+/* FOOTER */
 .footer{
 text-align:center;
 padding:30px;
 background:#0f172a;
 color:white;
-margin-top:40px;
 }
 
 </style>
@@ -118,106 +116,114 @@ margin-top:40px;
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
-  <div class="logo">Belal Abdelfattah</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="field-guide.html">Field Guide</a>
-    <a href="from-the-field.html">Blog</a>
-    <a href="#contact">Contact</a>
-  </div>
+<div class="logo">Belal Abdelfattah</div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="from-the-field.html">Blog</a>
+</div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>About Me</h1>
-  <p>
-    Food Safety & HACCP Coach helping professionals and companies operate with confidence in real-world conditions.
-  </p>
+<h1>Not Just Food Safety… Real Operations</h1>
+<p>I help professionals and companies make food safety actually work — not just pass audits.</p>
 </div>
 
 <div class="container">
 
-<!-- SECTION 1 -->
-<div class="section">
-<h2>Who I Help</h2>
-
-<p>
-I help food safety professionals and companies in Egypt build practical HACCP systems, pass inspections, and operate effectively in real environments.
-</p>
-
-</div>
-
-<!-- SECTION 2 -->
-<div class="section">
-<h2>My Experience</h2>
-
-<p>
-Over the past few years, I’ve worked across food factories, warehouses, and operational environments. I’ve seen how systems often look perfect on paper—but break under real pressure.
-</p>
-
-<p>
-From audits to production challenges, I’ve been in situations where decisions had to be made quickly, balancing safety, compliance, and operations.
-</p>
-
-</div>
-
-<!-- SECTION 3 -->
-<div class="section">
-<h2>My Approach</h2>
-
-<p>
-My approach is simple: food safety must work in real operations—not just documentation.
-</p>
-
-<ul>
-<li>Practical HACCP implementation</li>
-<li>Real-world problem solving</li>
-<li>Systems that teams can actually follow</li>
-<li>Preparation for real audits—not theoretical ones</li>
-</ul>
-
-</div>
-
-<!-- SECTION 4 -->
-<div class="section">
-<h2>What I Do</h2>
-
-<ul>
-<li>1:1 Coaching for HACCP systems</li>
-<li>Audit preparation and readiness</li>
-<li>Food safety system development</li>
-<li>Career mentorship in food safety</li>
-</ul>
-
-</div>
-
-<!-- SECTION 5 -->
-<div class="section">
+<!-- STORY -->
+<div class="block">
 <h2>From the Field</h2>
 
 <p>
-I’ve seen real cases where small issues—like damaged cans, poor handling, or weak processes—turned into serious operational risks.
+I’ve worked inside factories, warehouses, and real operations — not just behind a desk.
+</p>
+
+<div class="highlight">
+<p>
+I’ve seen damaged cans leaking into cartons…  
+Production lines stopping under pressure…  
+And teams forced to choose between “keep running” or “do it right.”
+</p>
+</div>
+
+<p>
+These are not textbook situations.  
+This is where real food safety decisions happen.
+</p>
+</div>
+
+<!-- WHY -->
+<div class="block">
+<h2>Why I Do This</h2>
+
+<p>
+Most food safety systems look perfect on paper — but fail in real life.
 </p>
 
 <p>
-These are the moments where food safety decisions matter most. My work focuses on helping professionals handle these situations with clarity and confidence.
+My goal is simple:
 </p>
+
+<div class="highlight">
+<strong>Build systems that work under pressure, not just during audits.</strong>
+</div>
+
+</div>
+
+<!-- HOW -->
+<div class="block">
+<h2>How I Work</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Practical First</h3>
+<p>No theory without application. Everything must work in real operations.</p>
+</div>
+
+<div class="card">
+<h3>From Experience</h3>
+<p>Based on real cases from factories, warehouses, and audits.</p>
+</div>
+
+<div class="card">
+<h3>Simple Systems</h3>
+<p>If your team can’t follow it, it’s not a good system.</p>
+</div>
+
+<div class="card">
+<h3>Audit Ready</h3>
+<p>Built to pass inspections without stress or surprises.</p>
+</div>
+
+</div>
+</div>
+
+<!-- WHAT YOU DO -->
+<div class="block">
+<h2>What I Do</h2>
+
+<ul>
+<li>1:1 HACCP Coaching</li>
+<li>Food Safety System Setup</li>
+<li>Audit Preparation</li>
+<li>Career Mentorship</li>
+</ul>
 
 </div>
 
 <!-- CTA -->
 <div class="cta">
-  <h2>Work With Me</h2>
-  <p>If you're looking to build or improve your food safety system, I can help you do it the right way.</p>
-  <a href="#contact" class="cta-btn">Book a Session</a>
+<h2>Let’s Build Something That Works</h2>
+<p>If you're serious about food safety — let’s do it right.</p>
+<a href="#" class="cta-btn">Book a Session</a>
 </div>
 
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
 © 2026 Belal Abdelfattah
 </div>
