@@ -1,187 +1,181 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Food Safety Basics | Belal Abdelfattah</title>
 
 <style>
-
-body{
-font-family:Arial;
-background:#f5f5f5;
-margin:0;
-}
-
-header{
-background:#1e7f5c;
-color:white;
-padding:20px;
-text-align:center;
-position:relative;
-}
-
-.lang{
-position:absolute;
-right:20px;
-top:20px;
-}
-
-.lang button{
-padding:6px 12px;
-border:none;
-border-radius:4px;
-cursor:pointer;
-margin-left:5px;
-}
-
-.container{
-width:90%;
-max-width:900px;
-margin:auto;
-margin-top:30px;
-}
-
-.article{
-background:white;
-padding:25px;
-margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 3px 8px rgba(0,0,0,0.1);
-}
-
-.article h3{
-margin-top:0;
-color:#1e7f5c;
-}
-
-.button{
-display:inline-block;
-padding:10px 18px;
-background:#1e7f5c;
-color:white;
-text-decoration:none;
-border-radius:5px;
-margin-top:10px;
-}
-
-.button:hover{
-background:#155a41;
-}
-
-.ar{
-display:none;
-direction:rtl;
-text-align:right;
-}
-
+/* ===== GLOBAL ===== */
+body{font-family:Segoe UI, Arial, sans-serif;margin:0;background:#ffffff;color:#222;line-height:1.7;}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:white;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:100;}
+.logo{font-weight:700;color:#16a34a;}
+.nav-links a{margin-left:20px;text-decoration:none;color:#334155;font-size:14px;}
+.nav-links a:hover{color:#16a34a;}
+.hero{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#ecfdf5,#bbf7d0);}
+.hero h1{font-size:36px;margin-bottom:10px;}
+.hero p{color:#475569;font-size:18px;}
+.container{max-width:900px;margin:auto;padding:40px 20px;}
+.section-intro{text-align:left;color:#475569;margin-bottom:40px;font-size:16px;}
+.article-card{display:flex;gap:15px;align-items:center;background:#f8fafc;padding:15px;border-radius:10px;margin-bottom:15px;cursor:pointer;transition:0.25s;}
+.article-card:hover{transform:translateY(-3px);box-shadow:0 6px 15px rgba(0,0,0,0.08);}
+.article-card img{width:120px;height:80px;object-fit:cover;border-radius:8px;}
+.card-text h3{margin:0;color:#16a34a;}
+.card-text p{margin:5px 0 0;font-size:14px;color:#555;}
+.article-content{display:none;padding:25px;margin:20px 0 40px;border-left:4px solid #16a34a;background:#f8fafc;border-radius:8px;}
+.article-content img{width:100%;margin:20px 0;border-radius:8px;}
+ul{margin-left:20px;}
+hr{margin:30px 0;border:none;border-top:1px solid #ddd;}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:20px;}
+.references, .author-signature, .article-cta, .share-buttons{margin-top:30px;}
+.references h4{margin-bottom:10px;color:#16a34a;}
+.references ul{list-style:disc;}
+.references a{color:#16a34a;text-decoration:none;}
+.references a:hover{text-decoration:underline;}
+.author-signature{display:flex;align-items:center;gap:15px;margin-top:20px;}
+.author-img{width:60px;height:60px;border-radius:50%;object-fit:cover;}
+.article-cta .cta-btn{display:inline-block;margin-right:15px;margin-top:10px;padding:10px 18px;background:#16a34a;color:white;text-decoration:none;border-radius:5px;font-weight:600;transition:0.2s;}
+.article-cta .cta-btn:hover{background:#138c3f;}
+.share-buttons span{font-weight:600;margin-right:10px;}
+.share-buttons a{display:inline-block;margin-right:10px;text-decoration:none;padding:5px 10px;background:#e2e8f0;border-radius:5px;transition:0.2s;font-size:14px;color:#334155;}
+.share-buttons a:hover{background:#16a34a;color:white;}
+.footer{text-align:center;padding:30px;background:#0f172a;color:white;margin-top:40px;}
 </style>
-
-<script>
-
-function setLanguage(lang){
-
-let en=document.querySelectorAll(".en");
-let ar=document.querySelectorAll(".ar");
-
-if(lang=="en"){
-en.forEach(el=>el.style.display="block");
-ar.forEach(el=>el.style.display="none");
-}
-
-if(lang=="ar"){
-en.forEach(el=>el.style.display="none");
-ar.forEach(el=>el.style.display="block");
-}
-
-}
-
-</script>
-
 </head>
 
 <body>
 
-<header>
-
-<h1 class="en">Food Safety Basics</h1>
-<h1 class="ar">أساسيات سلامة الغذاء</h1>
-
-<p class="en">Fundamental knowledge every food safety professional should know</p>
-<p class="ar">المعرفة الأساسية التي يجب أن يعرفها كل متخصص في سلامة الغذاء</p>
-
-<div class="lang">
-<button onclick="setLanguage('en')">EN</button>
-<button onclick="setLanguage('ar')">AR</button>
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">Belal Abdelfattah</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="field-guide.html">Field Guide</a>
+    <a href="from-the-field.html">Blog</a>
+    <a href="#contact">Contact</a>
+  </div>
 </div>
 
-</header>
+<!-- HERO -->
+<div class="hero">
+  <h1>Food Safety Basics</h1>
+  <p>Fundamental knowledge every food safety professional should know</p>
+</div>
 
 <div class="container">
 
-<div class="article">
+<h2 class="section-title">Topics</h2>
+<p class="section-intro">Click any topic to see details and learn more.</p>
 
-<h3 class="en">What is Food Safety?</h3>
-<h3 class="ar">ما هي سلامة الغذاء؟</h3>
+<!-- ================= CARDS ================= -->
+<div class="article-card" onclick="toggleArticle('whatIsFoodSafety')">
+  <img src="images/food-safety-intro.webp" alt="What is Food Safety">
+  <div class="card-text">
+    <h3>▶ What is Food Safety?</h3>
+    <p>Introduction and importance of safe food production</p>
+  </div>
+</div>
 
-<p class="en">
-An introduction to the concept of food safety and its importance
-for protecting consumers and ensuring safe food production.
-</p>
+<div class="article-card" onclick="toggleArticle('foodHazards')">
+  <img src="images/food-hazards.webp" alt="Food Safety Hazards">
+  <div class="card-text">
+    <h3>▶ Types of Food Safety Hazards</h3>
+    <p>Biological, chemical, and physical hazards in food</p>
+  </div>
+</div>
 
-<p class="ar">
-مقدمة حول مفهوم سلامة الغذاء وأهميته في حماية المستهلك
-وضمان إنتاج غذاء آمن.
-</p>
+<div class="article-card" onclick="toggleArticle('foodCulture')">
+  <img src="images/food-culture.webp" alt="Food Safety Culture">
+  <div class="card-text">
+    <h3>▶ Food Safety Culture</h3>
+    <p>Building a strong culture for successful food safety systems</p>
+  </div>
+</div>
 
-<a class="button en" href="what-is-food-safety.html">Read Article</a>
-<a class="button ar" href="what-is-food-safety.html">قراءة المقال</a>
+<!-- ================= ARTICLES ================= -->
+
+<div class="article-content" id="whatIsFoodSafety">
+<h2>What is Food Safety?</h2>
+<div class="article-meta">Updated: March 31, 2026 | Reading time: 5 min</div>
+<p>Food safety is the practice of handling, preparing, and storing food in ways that prevent foodborne illness and ensure safe consumption. Professionals in the field protect consumers, ensure compliance, and maintain food quality from farm to fork.</p>
+
+<div class="references">
+<h4>References</h4>
+<ul>
+<li><a href="https://www.fda.gov/food" target="_blank">FDA Food Safety</a></li>
+<li><a href="https://www.cdc.gov/foodsafety/" target="_blank">CDC Food Safety</a></li>
+</ul>
+</div>
+
+<div class="author-signature">
+<img src="images/belal-profile.webp" alt="Belal Abdelfattah" class="author-img">
+<div><p><strong>Belal Abdelfattah</strong><br><small>Food Safety & QA Professional</small></p></div>
+</div>
+
+<div class="article-cta">
+<a href="#contact" class="cta-btn">Book a Session</a>
+<a href="#contact" class="cta-btn">Contact Me</a>
+</div>
+
+<div class="share-buttons">
+<span>Share:</span>
+<a href="#" target="_blank">Facebook</a>
+<a href="#" target="_blank">LinkedIn</a>
+<a href="#" target="_blank">Twitter</a>
+<a href="#" target="_blank">Email</a>
+</div>
+</div>
+
+<div class="article-content" id="foodHazards">
+<h2>Types of Food Safety Hazards</h2>
+<div class="article-meta">Updated: March 31, 2026 | Reading time: 5 min</div>
+<p>Food hazards are classified as biological, chemical, or physical. Understanding them helps food safety professionals control risks, prevent contamination, and ensure safe food production.</p>
+
+<div class="author-signature">
+<img src="images/belal-profile.webp" alt="Belal Abdelfattah" class="author-img">
+<div><p><strong>Belal Abdelfattah</strong><br><small>Food Safety & QA Professional</small></p></div>
+</div>
+
+<div class="article-cta">
+<a href="#contact" class="cta-btn">Book a Session</a>
+<a href="#contact" class="cta-btn">Contact Me</a>
+</div>
+</div>
+
+<div class="article-content" id="foodCulture">
+<h2>Food Safety Culture</h2>
+<div class="article-meta">Updated: March 31, 2026 | Reading time: 5 min</div>
+<p>Building a strong food safety culture means creating awareness, accountability, and proper practices among all staff. It is essential for the effectiveness of food safety systems.</p>
+
+<div class="author-signature">
+<img src="images/belal-profile.webp" alt="Belal Abdelfattah" class="author-img">
+<div><p><strong>Belal Abdelfattah</strong><br><small>Food Safety & QA Professional</small></p></div>
+</div>
+
+<div class="article-cta">
+<a href="#contact" class="cta-btn">Book a Session</a>
+<a href="#contact" class="cta-btn">Contact Me</a>
+</div>
+</div>
 
 </div>
 
-<div class="article">
-
-<h3 class="en">Types of Food Safety Hazards</h3>
-<h3 class="ar">أنواع مخاطر سلامة الغذاء</h3>
-
-<p class="en">
-Understanding biological, chemical and physical hazards
-in food production environments.
-</p>
-
-<p class="ar">
-فهم المخاطر البيولوجية والكيميائية والفيزيائية
-في بيئات إنتاج الغذاء.
-</p>
-
-<a class="button en" href="food-safety-hazards.html">Read Article</a>
-<a class="button ar" href="food-safety-hazards.html">قراءة المقال</a>
-
+<div class="footer">
+© 2026 Belal Abdelfattah
 </div>
 
-<div class="article">
-
-<h3 class="en">Food Safety Culture</h3>
-<h3 class="ar">ثقافة سلامة الغذاء</h3>
-
-<p class="en">
-Why building a strong food safety culture is essential
-for successful food safety systems.
-</p>
-
-<p class="ar">
-لماذا تعتبر ثقافة سلامة الغذاء القوية
-أساسية لنجاح أنظمة سلامة الغذاء.
-</p>
-
-<a class="button en" href="food-safety-culture.html">Read Article</a>
-<a class="button ar" href="food-safety-culture.html">قراءة المقال</a>
-
-</div>
-
-</div>
+<script>
+let currentOpen = null;
+function toggleArticle(id){
+  const el = document.getElementById(id);
+  if(currentOpen === id){el.style.display="none";currentOpen=null;return;}
+  document.querySelectorAll('.article-content').forEach(a=>a.style.display='none');
+  el.style.display="block";
+  el.scrollIntoView({behavior:'smooth'});
+  currentOpen=id;
+}
+</script>
 
 </body>
-
 </html>
