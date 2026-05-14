@@ -150,6 +150,17 @@ section{
   </button>
 
 </div>
+.btn-primary,
+.btn-secondary{
+  background-color: #16a34a;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+  background-color: #15803d;
+}
 
 .service{
   padding:25px;
